@@ -5,7 +5,7 @@ const methodOveride = require('method-override');
 const bossesController = require('./controllers/bosses');
 const characterInformationController = require('./controllers/characterInformation');
 const classesController = require('./controllers/classes');
-const creaturesEnemiesController = require('./controllers/creaturesEnemies');
+const enemiesController = require('./controllers/enemies');
 const damageTypesController = require('./controllers/damageTypes');
 const equipmentMagicController = require('./controllers/equipmentMagic');
 const keepsakesController = require('./controllers/keepsakes');
@@ -42,7 +42,7 @@ app.use('/world_information', worldInformationController);
 app.use('/world_information/bosses', bossesController);
 app.use('/world_information/npcs', npcsController);
 app.use('/world_information/legacy_dungeons', legacyDungeonsController);
-app.use('/world_information/creatures_enemies', creaturesEnemiesController)
+app.use('/world_information/enemies', enemiesController)
 
 
 app.listen(PORT, () => {
