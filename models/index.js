@@ -13,7 +13,7 @@ module.exports = {
     Stats: require('./stats'),
     StatusEffects: require ('./StatusEffects'),
     Talismans: require ('./Talismans'),
-    Upgrades: require('./upgrades'),
-    Weapons: require('./weapons'),
+    Upgrades: require('./Upgrades'),
+    Weapons: require('./Weapons'),
     WorldInformation: require('./worldInformation'),
 }
