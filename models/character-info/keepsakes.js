@@ -1,4 +1,4 @@
-let keepsakes = [
+let Keepsakes = [
     {
         name: 'Crimson Amber Medallion',
         type: 'Talisman',
@@ -63,4 +63,4 @@ let keepsakes = [
         img: 'https://eldenring.wiki.fextralife.com/file/Elden-Ring/shabriris_woe_talisman_elden_ring_wiki_guide_200px.png'
     }
 ];
-module.exports = keepsakes;
+module.exports = Keepsakes;
