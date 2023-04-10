@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = 4000;
+const PORT = 4001;
 const methodOveride = require('method-override');
 const bossesController = require('./controllers/bosses');
 const characterInformationController = require('./controllers/characterInformation');
@@ -27,22 +27,23 @@ app.get('/', (req, res) => {
     res.render('home.ejs')
 })
 
-app.use('/character_information', characterInformationController);
-app.use('/character_information/classes', classesController);
-app.use('/character_information/keepsakes', keepsakesController);
-app.use('/character_information', statusEffectsController);
+// app.use('/character_information', characterInformationController);
+// app.use('/character_information/classes', classesController);
+// app.use('/character_information/keepsakes', keepsakesController);
+// app.use('/character_information/stats', statsController);
+// app.use('/character_information', statusEffectsController);
 
-app.use('/equipment_magic', equipmentMagicController);
-app.use('/equipment_magic/weapons', weaponsController);
-app.use('/equipment_magic/damage_types', damageTypesController);
-app.use('/equipment_magic/talismans', talismansController);
-app.use('/equipment_magic/upgrades', upgradesController)
+// app.use('/equipment_magic', equipmentMagicController);
+// app.use('/equipment_magic/weapons', weaponsController);
+// app.use('/equipment_magic/damage_types', damageTypesController);
+// app.use('/equipment_magic/talismans', talismansController);
+// app.use('/equipment_magic/upgrades', upgradesController)
 
-app.use('/world_information', worldInformationController);
-app.use('/world_information/bosses', bossesController);
-app.use('/world_information/npcs', npcsController);
-app.use('/world_information/legacy_dungeons', legacyDungeonsController);
-app.use('/world_information/creatures_enemies', creaturesEnemiesController)
+// app.use('/world_information', worldInformationController);
+// app.use('/world_information/bosses', bossesController);
+// app.use('/world_information/npcs', npcsController);
+// app.use('/world_information/legacy_dungeons', legacyDungeonsController);
+// app.use('/world_information/creatures_enemies', creaturesEnemiesController)
 
 
 app.listen(PORT, () => {

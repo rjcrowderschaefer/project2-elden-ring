@@ -1,4 +1,4 @@
-let classes = [
+let Classes = [
     {
         name: 'Hero',
         soulLevel: '7',
@@ -311,4 +311,4 @@ let classes = [
     }
 ]
 
-module.exports = classes
+module.exports = Classes
