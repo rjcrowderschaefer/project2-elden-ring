@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require('../../config/connection');
 
 const characterInformationSchema = new mongoose.Schema(
     {
