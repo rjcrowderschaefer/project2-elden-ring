@@ -8,32 +8,45 @@ const classesSchema = new mongoose.Schema(
             unique: true
         },
 
-        soulLevel : {
-            type: String
+        soulLevel: {
+            type: String,
         },
 
-        description : {
-            type :String
+        description: {
+            type: String,
         },
 
         img: {
             type: String,
         },
 
-        stats : {
-            type: String
+        stats: {
+            vigor: String,
+            mind: String,
+            endurance: String,
+            strength: String,
+            dex: String,
+            int: String,
+            fai: String,
+            arc: String,
         },
 
-        weapons : {
-            type: String
+        weapons: {
+            weapon1: String,
+            weapon2: String,
+            Weapon3: String,
         },
 
-        spells : {
-            type: String,
+        spells: {
+            spell1: String,
+            spell2: String,
         },
 
-        armor : {
-            type:String
+        armor: {
+            head: String,
+            chest: String,
+            hands: String,
+            legs: String,
         }
 
     }
