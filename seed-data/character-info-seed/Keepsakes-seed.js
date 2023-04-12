@@ -17,7 +17,7 @@ let Keepsakes = [
         name: 'Golden Seed',
         type: 'Upgrade Material',
         description: 'A golden seed washed ashore from the Lands Between. Said to reinforce Sacred flasks.',
-        affect: 'Grants an additional charge for your Sacred Flasks, providing extra HP or FP restoration.',
+        effect: 'Grants an additional charge for your Sacred Flasks, providing extra HP or FP restoration.',
         img: 'https://eldenring.wiki.fextralife.com/file/Elden-Ring/golden_seed_elden_ring_wiki_guide_200px.png'
     },
     {
