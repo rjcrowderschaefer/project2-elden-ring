@@ -8,7 +8,7 @@ router.get('', async (req, res, next) => {
     try {
         await CharacterInformation.deleteMany({});
         await CharacterInformation.insertMany(characterInfo);
-        res.redirect('/character_information');
+        res.render('characterInformation/index.ejs', {characterInfo});
     } catch(err) {
         console.log(err);
         next();

@@ -1,0 +1,9 @@
+<%- include('../partials/header.ejs') %>
+<h1>Character Information</h1>
+<% for(let i = 0; i < characterInfo.length; i++) { %>
+
+<h2>Name: <%= characterInfo[i].name %></h2>
+
+
+<% } %>
+<%- include('../partials/footer.ejs') %>
