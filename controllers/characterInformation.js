@@ -15,4 +15,6 @@ router.get('', async (req, res, next) => {
     }
 })
 
+// not doing additional routes for this index page and given that we will hard code the four categories on the index.ejs page for Character Info
+
 module.exports = router;
