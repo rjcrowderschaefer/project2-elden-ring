@@ -39,7 +39,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/character_information', characterInformationController);
-// app.use('/character_information/classes', classesController);
+app.use('/character_information/classes', classesController);
 // app.use('/character_information/keepsakes', keepsakesController);
 // app.use('/character_information/stats', statsController);
 // app.use('/character_information', statusEffectsController);

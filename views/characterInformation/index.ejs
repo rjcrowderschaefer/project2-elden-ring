@@ -2,8 +2,9 @@
 <h1>Character Information</h1>
 <% for(let i = 0; i < characterInfo.length; i++) { %>
 
-<h2>Name: <%= characterInfo[i].name %></h2>
-
+<img src=<%= characterInfo[i].img %>><br>
+<h2>Name: <a href = 'character_information/<%= characterInfo[i].name %>'>
+    <%= characterInfo[i].name %></a></h2>
 
 <% } %>
 <%- include('../partials/footer.ejs') %>
