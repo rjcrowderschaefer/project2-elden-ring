@@ -1,6 +1,9 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
 
 const connectionString = process.env.MONGO_DB_URI;
+
+console.log(connectionString);
 
 mongoose.connect(connectionString);
 
@@ -15,3 +18,5 @@ mongoose.connection.on('error', (error) => {
 mongoose.connection.on('disconnected', () => {
     console.log('MongoDB disconnected ⚡️ 🔌 ⚡️')
 })
+
+module.exports = mongoose

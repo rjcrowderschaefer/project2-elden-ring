@@ -18,6 +18,17 @@ const upgradesController = require('./controllers/upgrades');
 const weaponsController = require('./controllers/weapons');
 const worldInformationController = require('./controllers/worldInformation');
 
+
+
+require('dotenv').config();
+const connectionString = process.env.MONGO_DB_URI;
+
+console.log(connectionString);
+
+
+
+
+
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
@@ -27,7 +38,7 @@ app.get('/', (req, res) => {
     res.render('home.ejs')
 })
 
-// app.use('/character_information', characterInformationController);
+app.use('/character_information', characterInformationController);
 // app.use('/character_information/classes', classesController);
 // app.use('/character_information/keepsakes', keepsakesController);
 // app.use('/character_information/stats', statsController);
