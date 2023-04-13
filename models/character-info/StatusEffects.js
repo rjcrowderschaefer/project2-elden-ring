@@ -8,10 +8,6 @@ const statusEffectsSchema = new mongoose.Schema(
             unique: true
         },
 
-        softcap: {
-            type: String,
-        },
-
         img: {
             type: String
         },
@@ -22,6 +18,6 @@ const statusEffectsSchema = new mongoose.Schema(
     }
 );
 
-const statusEffects = mongoose.model('statusEffects', statusEffectsSchema);
+const StatusEffects = mongoose.model('statusEffects', statusEffectsSchema);
 
-module.exports = statusEffects
+module.exports = StatusEffects

@@ -22,6 +22,6 @@ const statsSchema = new mongoose.Schema(
     }
 );
 
-const stats = mongoose.model('stats', statsSchema);
+const Stats = mongoose.model('stats', statsSchema);
 
-module.exports = stats
+module.exports = Stats

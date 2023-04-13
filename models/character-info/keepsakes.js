@@ -5,25 +5,24 @@ const keepsakesSchema = new mongoose.Schema(
         name: {
             type: String,
             required: [true],
-            unique: true
+            unique: true,
         },
 
         type: {
             type: String,
             required: [true],
-            unique: true
         },
 
         description: {
-            type: String
+            type: String,
         },
 
         effect: {
-            type: String
+            type: String,
         },
 
         img: {
-            type: String
+            type: String,
         }
 
     }
