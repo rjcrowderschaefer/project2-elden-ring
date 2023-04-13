@@ -47,8 +47,8 @@ const Talismans = [
         upgradedVersions: '1 variant available',
         whereToFind: {
             regular: 'Summonwater Village. In an underground area on the eastern outskirts of the village. Entering the area requires a Stonesword Key.',
-            plusOne: null,
-            plusTwo: null
+            plusOne: 'none',
+            plusTwo: 'none'
         }
     },
     {
@@ -60,8 +60,8 @@ const Talismans = [
         upgradedVersions: '1 variant available',
         whereToFind: {
             regular: 'Reward for completing the The Great-Jar challenge of defeating three NPC duelists in Dragonbarrow (northern Caelid).',
-            plusOne: null,
-            plusTwo: null
+            plusOne: 'none',
+            plusTwo: 'none'
         }
     },
     {
@@ -73,8 +73,8 @@ const Talismans = [
         upgradedVersions: '1 variant available',
         whereToFind: {
             regular: 'Elphael, Brace of the Haligtree: Found in a chest on an elevated platform inside the large building in the northeast, guarded by several Pests.',
-            plusOne: null,
-            plusTwo: null
+            plusOne: 'none',
+            plusTwo: 'none'
         }
     },
     {
@@ -86,8 +86,8 @@ const Talismans = [
         upgradedVersions: '1 variant available',
         whereToFind: {
             regular: 'Found in a cellar underneath the Mistwood Ruins in eastern Limgrave.',
-            plusOne: null,
-            plusTwo: null
+            plusOne: 'none',
+            plusTwo: 'none'
         }
     },
     {
@@ -99,8 +99,8 @@ const Talismans = [
         upgradedVersions: '1 variant available',
         whereToFind: {
             regular: 'Found in a chest atop Albinauric Rise, in the east of the Consecrated Snowfield.',
-            plusOne: null,
-            plusTwo: null
+            plusOne: 'none',
+            plusTwo: 'none'
         }
     },
     {
@@ -112,8 +112,8 @@ const Talismans = [
         upgradedVersions: '1 variant available',
         whereToFind: {
             regular: 'Drops from Gowry after you kill him, only if he is crying about Millicents death.',
-            plusOne: null,
-            plusTwo: null
+            plusOne: 'none',
+            plusTwo: 'none'
         }
     },
     {
@@ -125,8 +125,8 @@ const Talismans = [
         upgradedVersions: '1 variant available',
         whereToFind: {
             regular: 'In Raya Lucaria Academy, the talisman is found inside a treasure chest on the second floor near the Debate Parlor Site of Grace. From the Site of Grace, head north into the courtyard.',
-            plusOne: null,
-            plusTwo: null
+            plusOne: 'none',
+            plusTwo: 'none'
         }
     },
 
