@@ -1,6 +1,6 @@
 const Weapons = [
     {
-        swords: {
+        swords: [
             {
                 name: 'Claymore',
                 type: 'Greatsword',
@@ -196,25 +196,219 @@ const Weapons = [
                     arc: ''
                 }
             }
-        },
-        axes: {
-            name: 'koby'
-        },
-        hammers: {
-            name: 'koby'
-        },
-        spears: {
-            name: 'koby'
-        },
-        fists: {
-            name: 'koby'
-        },
-        projectileWeapons: {
-            name: 'koby'
-        },
-        casting: {
-            name: 'koby'
-        }
+        ],
+        axes: [
+            {
+                name: 'Axe Of Godfrey',
+                type: 'Colossal Axe',
+                img: 'https://eldenring.wiki.fextralife.com/file/Elden-Ring/axe_of_godfrey_colossal_weapon_elden_ring_wiki_guide_200px.png',
+                description: 'Weapon of Godfrey, Elden Lord. It was broken in a battle fought as leader of the Tarnished during the Long March. This weapon is symbolic of Godfreys vow to conduct himself as a lord, later becoming an emblem of the golden lineage. In the days of the past, a crown was warranted with strength.',
+                weight: '18',
+                location: 'Weapon of Godfrey, Elden Lord. It was broken in a battle fought as leader of the Tarnished during the Long March. This weapon is symbolic of Godfreys vow to conduct himself as a lord, later becoming an emblem of the golden lineage. In the days of the past, a crown was warranted with strength.',
+                ashOfWar: 'Regal Roar',
+                attack: {
+                    phy: '165',
+                    mag: '0',
+                    fire: '0',
+                    ligt: '0',
+                    holy: '0',
+                    crit: '100'
+                },
+                guard: {
+                    phy: '75',
+                    mag: '45',
+                    fire: '45',
+                    ligt: '45',
+                    holy: '45',
+                    boost: '50'
+                },
+                requirements: {
+                    str: '42',
+                    dex: '14',
+                    int: '0',
+                    fai: '0',
+                    arc: '0'
+                },
+                scaling: {
+                    str: 'D',
+                    dex: 'D',
+                    int: '',
+                    fai: '',
+                    arc: ''
+                }
+            },
+            {
+                name: '',
+                type: '',
+                img: '',
+                description: '',
+                weight: '',
+                location: '',
+                ashOfWar: '',
+                attack: {
+                    phy: '',
+                    mag: '',
+                    fire: '',
+                    ligt: '',
+                    holy: '',
+                    crit: ''
+                },
+                guard: {
+                    phy: '',
+                    mag: '',
+                    fire: '',
+                    ligt: '',
+                    holy: '',
+                    boost: ''
+                },
+                requirements: {
+                    str: '',
+                    dex: '',
+                    int: '',
+                    fai: '',
+                    arc: ''
+                },
+                scaling: {
+                    str: '',
+                    dex: '',
+                    int: '',
+                    fai: '',
+                    arc: ''
+                }
+            },
+            {
+                name: '',
+                type: '',
+                img: '',
+                description: '',
+                weight: '',
+                location: '',
+                ashOfWar: '',
+                attack: {
+                    phy: '',
+                    mag: '',
+                    fire: '',
+                    ligt: '',
+                    holy: '',
+                    crit: ''
+                },
+                guard: {
+                    phy: '',
+                    mag: '',
+                    fire: '',
+                    ligt: '',
+                    holy: '',
+                    boost: ''
+                },
+                requirements: {
+                    str: '',
+                    dex: '',
+                    int: '',
+                    fai: '',
+                    arc: ''
+                },
+                scaling: {
+                    str: '',
+                    dex: '',
+                    int: '',
+                    fai: '',
+                    arc: ''
+                }
+            },
+            {
+                name: '',
+                type: '',
+                img: '',
+                description: '',
+                weight: '',
+                location: '',
+                ashOfWar: '',
+                attack: {
+                    phy: '',
+                    mag: '',
+                    fire: '',
+                    ligt: '',
+                    holy: '',
+                    crit: ''
+                },
+                guard: {
+                    phy: '',
+                    mag: '',
+                    fire: '',
+                    ligt: '',
+                    holy: '',
+                    boost: ''
+                },
+                requirements: {
+                    str: '',
+                    dex: '',
+                    int: '',
+                    fai: '',
+                    arc: ''
+                },
+                scaling: {
+                    str: '',
+                    dex: '',
+                    int: '',
+                    fai: '',
+                    arc: ''
+                }
+            },
+            {
+                name: '',
+                type: '',
+                img: '',
+                description: '',
+                weight: '',
+                location: '',
+                ashOfWar: '',
+                attack: {
+                    phy: '',
+                    mag: '',
+                    fire: '',
+                    ligt: '',
+                    holy: '',
+                    crit: ''
+                },
+                guard: {
+                    phy: '',
+                    mag: '',
+                    fire: '',
+                    ligt: '',
+                    holy: '',
+                    boost: ''
+                },
+                requirements: {
+                    str: '',
+                    dex: '',
+                    int: '',
+                    fai: '',
+                    arc: ''
+                },
+                scaling: {
+                    str: '',
+                    dex: '',
+                    int: '',
+                    fai: '',
+                    arc: ''
+                }
+            }
+        ],
+        hammers: [
+
+        ],
+        spears: [
+
+        ],
+        fists: [
+
+        ],
+        projectileWeapons: [
+            
+        ],
+        casting: [
+
+        ]
     }
 
 ];
