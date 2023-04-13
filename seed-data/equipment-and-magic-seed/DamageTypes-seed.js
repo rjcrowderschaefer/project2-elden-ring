@@ -3,19 +3,19 @@ const DamageTypes = [
         name: 'Standard Damage',
         effectiveAgainst: 'Most enemies',
         ineffectiveAgainst: 'Miners',
-        notes: null
+        notes: ''
     },
     {
         name: 'Strike Damage',
         effectiveAgainst: 'Armored Enemies, Rocky / Brittle Creatures',
         ineffectiveAgainst: 'Scaly Creatures',
-        notes: null
+        notes: ''
     },
     {
         name: 'Slash Damage',
         effectiveAgainst: 'Unarmored / Lightly Armored Enemies, Fleshy Creatures',
         ineffectiveAgainst: 'Heavily Armored Enemies, Rocky Creatures, Giant Ants',
-        notes: null
+        notes: ''
     },
     {
         name: 'Pierce Damage',
@@ -27,7 +27,7 @@ const DamageTypes = [
         name: 'Magic Damage',
         effectiveAgainst: 'Armored Enemies, Miners',
         ineffectiveAgainst: 'Magic-oriented Enemies',
-        notes: null
+        notes: ''
     },
     {
         name: 'Fire Damage',
@@ -45,7 +45,7 @@ const DamageTypes = [
         name: 'Holy Damage',
         effectiveAgainst: 'Undead, Crabs, Albinaurics',
         ineffectiveAgainst: 'Godskin Apostle and Noble, Most Shardbearers, Royal Revenants, Erdtree Avatars, Bell Bearing Hunters, Erdtree Avatars, Cleanrot Knights, Omenkillers, Tree Spirits, Crucible Knights, Black Knife Assassins',
-        notes: null
+        notes: ''
     }
 ]
 module.exports = DamageTypes;
