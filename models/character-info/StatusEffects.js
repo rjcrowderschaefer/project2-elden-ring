@@ -22,6 +22,6 @@ const statusEffectsSchema = new mongoose.Schema(
     }
 );
 
-const statusEffects = mongoose.model('statusEffects', statusEffectsSchema);
+const StatusEffects = mongoose.model('statuseffects', statusEffectsSchema);
 
-module.exports = statusEffects
+module.exports = StatusEffects
