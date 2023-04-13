@@ -1,4 +1,4 @@
-let Classes = [
+const Classes = [
     {
         name: 'Hero',
         soulLevel: '7',

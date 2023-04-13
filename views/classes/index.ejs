@@ -1,8 +1,9 @@
 <%- include('../partials/header.ejs') %>
 <h1>Classes</h1>
+
 <% for(let i = 0; i < classesInfo.length; i++) { %>
-
-<h2>Name: <%= classesInfo[i].name %></h2>
-
+<img src=<%= classesInfo[i].img %>><br>
+<a href = '/character_information/Classes/<%= classesInfo[i].name %>'><h2>Name: <%= classesInfo[i].name %></h2></a>
 <% } %>
+
 <%- include('../partials/footer.ejs') %>
