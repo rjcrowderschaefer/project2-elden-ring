@@ -20,8 +20,15 @@ const classesSchema = new mongoose.Schema(
             type: String,
         },
 
-        stats : {
-            type: String
+        stats: {
+            vigor: String,
+            mind: String,
+            endurance: String,
+            strength: String,
+            dex: String,
+            int: String,
+            fai: String,
+            arc: String,
         },
 
         weapons : {
@@ -39,6 +46,6 @@ const classesSchema = new mongoose.Schema(
     }
 );
 
-const Classes = mongoose.model('classes', classesSchema);
+const classes = mongoose.model('classes', classesSchema);
 
 module.exports = Classes
