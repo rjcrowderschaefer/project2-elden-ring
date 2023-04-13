@@ -1,0 +1,12 @@
+<%- include('../partials/header.ejs') %>
+
+<h1>List of Keepsakes</h1>
+
+<img src= <%=myKeepsakesInfo.img %> alt="Image of <%= myKeepsakesInfo.name %>">
+
+<h2>Name: <%= myKeepsakesInfo.name %></h2>
+<h2>Type: <%= myKeepsakesInfo.type %></h2>
+<h2>Description: <%= myKeepsakesInfo.description %></h2>
+<h2>Effect: <%= myKeepsakesInfo.effect %></h2>
+
+<%- include('../partials/footer.ejs') %>

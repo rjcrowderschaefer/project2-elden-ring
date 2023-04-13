@@ -34,4 +34,6 @@ const StatusEffects = [
         img: 'https://eldenring.wiki.fextralife.com/file/Elden-Ring/blight_status_effect_elden_ring_wiki_guide_100px.png',
         description: 'Corrupted influence extracted from the Rune of Death can inflict Death Blight. When taken by Death Blight, spires of pure death rapidly grow from their dead body, killing the victim immediately. '
     }
-]
+];
+
+module.exports = StatusEffects

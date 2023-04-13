@@ -7,7 +7,7 @@ const statsSchema = new mongoose.Schema(
             required: [true],
             unique: true
         },
-
+        
         softcap: {
             type: String,
         },

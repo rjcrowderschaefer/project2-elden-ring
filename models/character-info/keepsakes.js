@@ -28,6 +28,6 @@ const keepsakesSchema = new mongoose.Schema(
     }
 );
 
-const keepsakes = mongoose.model('keepsakes', keepsakesSchema);
+const Keepsakes = mongoose.model('keepsakes', keepsakesSchema);
 
-module.exports = keepsakes
+module.exports = Keepsakes
