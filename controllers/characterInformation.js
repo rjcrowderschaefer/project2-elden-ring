@@ -14,8 +14,8 @@ const statusEffectsInfo = require('../seed-data/character-info-seed/StatusEffect
 
 router.get('', async (req, res, next) => {
     try {
-        await CharacterInformation.deleteMany({});
-        await CharacterInformation.insertMany(characterInfo);
+        // await CharacterInformation.deleteMany({});
+        // await CharacterInformation.insertMany(characterInfo);
         res.render('characterInformation/index.ejs', {characterInfo});
     } catch(err) {
         console.log(err);
@@ -29,18 +29,91 @@ router.get('/Classes', async (req, res, next) => {
     try {
         await Classes.deleteMany({});
         const newClassesInfo = await Classes.insertMany(classesInfo);
-        res.render('classes/index.ejs', {classesInfo: newClassesInfo});
+        const classes = await Classes.find();
+        res.render('classes/index.ejs', {classesInfo: classes});
     } catch(err) {
         console.log(err);
         next();
     }
 })
 
+router.get('/Classes/new', (req, res) => {
+    res.render('classes/new')
+});
+
 router.get('/Classes/:name', async (req, res, next) => {
     try {
         const myClassesInfo = await Classes.findOne({name: req.params.name});
         // console.log(myClassesInfo);
         res.render('classes/show', {myClassesInfo})
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.post('/Classes', async (req, res, next) => {
+    try {
+        let finalClass = {
+            name: req.body.name,
+            soulLevel: req.body.soulLevel,
+            description: req.body.description,
+            img: req.body.img,
+            stats: {
+                vigor: req.body.vigor,
+                mind: req.body.mind,
+                endurance: req.body.endurance,
+                strength: req.body.strength,
+                dex: req.body.dex,
+                int: req.body.int,
+                fai: req.body.fai,
+                arc: req.body.arc,
+            },
+            weapons: {
+                weapon1: req.body.weapon1,
+                weapon2: req.body.weapon2,
+                weapon3: req.body.weapon3,
+            },
+            spells: {
+                spell1: req.body.spell1,
+                spell2: req.body.spell2,
+            },
+            armor: {
+                head: req.body.head,
+                chest: req.body.chest,
+                hands: req.body.hands,
+                legs: req.body.legs,
+            }
+        };
+        const newClass = await Classes.create({name: req.body.name});
+        // console.log(req.body);
+        // console.log(newClass);
+        res.redirect('/character_information/Classes');
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.get('/Classes/:name/edit', async (req, res, next) => {
+    try {
+        const classToBeEdited = await Classes.findOne({name: req.params.name})
+        // console.log(classToBeEdited);
+        res.render('classes/edit', {classToBeEdited});
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.put('/Classes/:name', async (req, res, next) => {
+    try {
+        const classId = await Classes.findOne({name: req.params.name});
+        // console.log(classId[0]._id);
+        const updatedClass = await Classes.findByIdAndUpdate(classId._id, req.body);
+        // console.log(req.body);
+        res.redirect(`/character_information/Classes/${req.body.name}`)
+
     } catch(err) {
         console.log(err);
         next();

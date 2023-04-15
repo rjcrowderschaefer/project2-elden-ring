@@ -1,0 +1,73 @@
+<%- include('../partials/header.ejs') %>
+
+<h1>Edit the <%= classToBeEdited.name %> class</h1>
+
+<form action="/character_information/Classes/<%= classToBeEdited.name %>?_method=PUT" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" value="<%= classToBeEdited.name%>">
+    <br>
+    <label for="soulLevel">Soul Level:</label>
+    <input type="text" name="soulLevel" id="soulLevel" value="<%= classToBeEdited.soulLevel%>">
+    <br>
+    <label for="description">Description:</label>
+    <input type="text" name="description" id="description" value="<%= classToBeEdited.description%>">
+    <br>
+    <label for="vigor">Vigor:</label>
+    <input type="text" name="vigor" id="vigor" value="<%= classToBeEdited.stats.vigor%>">
+    <br>
+    <label for="mind">Mind:</label>
+    <input type="text" name="mind" id="mind" value="<%= classToBeEdited.stats.mind%>">
+    <br>
+    <label for="endurance">Endurance:</label>
+    <input type="text" name="endurance" id="endurance" value="<%= classToBeEdited.stats.endurance%>">
+    <br>
+    <label for="strength">Strength:</label>
+    <input type="text" name="strength" id="strength" value="<%= classToBeEdited.stats.strength%>">
+    <br>
+    <label for="dex">Dexterity:</label>
+    <input type="text" name="dex" id="dex" value="<%= classToBeEdited.stats.dex%>">
+    <br>
+    <label for="int">Intelligence:</label>
+    <input type="text" name="int" id="int" value="<%= classToBeEdited.stats.int%>">
+    <br>
+    <label for="fai">Faith:</label>
+    <input type="text" name="fai" id="fai" value="<%= classToBeEdited.stats.fai%>">
+    <br>
+    <label for="arc">Arcane:</label>
+    <input type="text" name="arc" id="arc" value="<%= classToBeEdited.stats.arc%>">
+    <br>
+    <label for="weapon1">Weapon One:</label>
+    <input type="text" name="weapon1" id="weapon1" value="<%= classToBeEdited.weapons.weapon1%>">
+    <br>
+    <label for="weapon2">Weapon Two:</label>
+    <input type="text" name="weapon2" id="weapon2" value="<%= classToBeEdited.weapons.weapon2%>">
+    <br>
+    <label for="weapon3">Weapon Three:</label>
+    <input type="text" name="weapon3" id="weapon3" value="<%= classToBeEdited.weapons.weapon3%>">
+    <br>
+    <label for="spell1">Spell One:</label>
+    <input type="text" name="spell1" id="spell1" value="<%= classToBeEdited.spells.spell1%>">
+    <br>
+    <label for="spell2">Spell Two:</label>
+    <input type="text" name="spell2" id="spell2" value="<%= classToBeEdited.spells.spell2%>">
+    <br>
+    <label for="head">Armor - Head:</label>
+    <input type="text" name="head" id="head" value="<%= classToBeEdited.armor.head%>">
+    <br>
+    <label for="chest">Armor - Chest:</label>
+    <input type="text" name="chest" id="chest" value="<%= classToBeEdited.armor.chest%>">
+    <br>
+    <label for="hands">Armor - Hands:</label>
+    <input type="text" name="hands" id="hands" value="<%= classToBeEdited.armor.hands%>">
+    <br>
+    <label for="legs">Armor - Legs:</label>
+    <input type="text" name="legs" id="legs" value="<%= classToBeEdited.armor.legs%>">
+    <br>
+    <label for="img">Image URL:</label>
+    <input type="text" name="img" id="img" value="<%= classToBeEdited.img%>">
+    <br>
+    <input type="submit" value="Update <%= classToBeEdited.name%> class">
+</form>
+
+
+<%- include('../partials/footer.ejs') %>
