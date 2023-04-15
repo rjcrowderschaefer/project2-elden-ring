@@ -145,20 +145,85 @@ router.delete('/Classes/:name', async (req, res, next) => {
 
 router.get('/Keepsakes', async (req, res, next) => {
     try {
-        await Keepsakes.deleteMany({});
-        const newKeepsakesInfo = await Keepsakes.insertMany(keepsakesInfo);
-        res.render('keepsakes/index.ejs', {keepsakesInfo: newKeepsakesInfo});
+        // await Keepsakes.deleteMany({});
+        // const newKeepsakesInfo = await Keepsakes.insertMany(keepsakesInfo);
+        const keepsakes = await Keepsakes.find();
+        res.render('keepsakes/index.ejs', {keepsakesInfo: keepsakes});
     } catch(err) {
         console.log(err);
         next();
     }
 })
 
+router.get('/Keepsakes/new', (req, res) => {
+    res.render('keepsakes/new')
+});
+
 router.get('/Keepsakes/:name', async (req, res, next) => {
     try {
         const myKeepsakesInfo = await Keepsakes.findOne({name: req.params.name});
         // console.log(myKeepsakesInfo);
         res.render('keepsakes/show', {myKeepsakesInfo})
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.post('/Keepsakes', async (req, res, next) => {
+    try {
+       let finalKeepsakes = {
+        name: req.body.name,
+        type: req.body.type,
+        description: req.body.description,
+        effect: req.body.effect,
+        img: req.body.img,
+       };
+    const newKeepsake = await Keepsakes.create({name: req.body.name})
+    res.redirect('/character_information/Keepsakes');
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.get('/Keepsakes/:name/edit', async (req, res, next) => {
+    try {
+        const keepsakeToBeEdited = await Keepsakes.findOne({name: req.params.name});
+        res.render('keepsakes/edit', {keepsakeToBeEdited});
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.put('/Keepsakes/:name', async (req, res, next) => {
+    try {
+        const keepsakeId = await Keepsakes.findOne({name: req.params.name});
+        const updatedKeepsake = await Keepsakes.findByIdAndUpdate(keepsakeId._id, req.body);
+        res.redirect(`/character_information/Keepsakes/${req.body.name}`);
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+}) 
+
+router.get('/Keepsakes/:name/delete', async (req, res, next) => {
+    try {
+        const keepsakeToBeDeleted = await Keepsakes.findOne({name: req.params.name});
+        res.render('keepsakes/delete', {keepsakeToBeDeleted});
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+
+router.delete('/Keepsakes/:name', async (req, res, next) => {
+    try {
+        const keepsakeId = await Keepsakes.findOne({name: req.params.name});
+        const deletedKeepsake = await Keepsakes.findByIdAndDelete(keepsakeId._id, req.body);
+        res.redirect(`/character_information/Keepsakes`);
     } catch(err) {
         console.log(err);
         next();
