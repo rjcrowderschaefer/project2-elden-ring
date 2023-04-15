@@ -54,4 +54,4 @@ const classesSchema = new mongoose.Schema(
 
 const Classes = mongoose.model('classes', classesSchema);
 
-module.exports = classes
+module.exports = Classes
