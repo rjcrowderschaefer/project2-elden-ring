@@ -17,3 +17,5 @@ const Spells = [
         }
     }
 ]
+
+module.exports = Spells
