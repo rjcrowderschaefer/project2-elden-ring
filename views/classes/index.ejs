@@ -1,6 +1,8 @@
 <%- include('../partials/header.ejs') %>
 <h1>Classes</h1>
 
+<h2><a href="/character_information/Classes/new">Add new class</a></h2>
+
 <% for(let i = 0; i < classesInfo.length; i++) { %>
 <img src=<%= classesInfo[i].img %>><br>
 <a href = '/character_information/Classes/<%= classesInfo[i].name %>'><h2>Name: <%= classesInfo[i].name %></h2></a>
