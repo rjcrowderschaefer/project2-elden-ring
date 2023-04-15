@@ -145,14 +145,19 @@ router.delete('/Classes/:name', async (req, res, next) => {
 
 router.get('/Keepsakes', async (req, res, next) => {
     try {
-        await Keepsakes.deleteMany({});
-        const newKeepsakesInfo = await Keepsakes.insertMany(keepsakesInfo);
-        res.render('keepsakes/index.ejs', {keepsakesInfo: newKeepsakesInfo});
+        // await Keepsakes.deleteMany({});
+        // const newKeepsakesInfo = await Keepsakes.insertMany(keepsakesInfo);
+        const keepsakes = await Keepsakes.find();
+        res.render('keepsakes/index.ejs', {keepsakesInfo: keepsakes});
     } catch(err) {
         console.log(err);
         next();
     }
 })
+
+router.get('/Keepsakes/new', (req, res) => {
+    res.render('keepsakes/new')
+});
 
 router.get('/Keepsakes/:name', async (req, res, next) => {
     try {
@@ -165,18 +170,170 @@ router.get('/Keepsakes/:name', async (req, res, next) => {
     }
 })
 
-// Stats routes
-
-router.get('/Stats', async (req, res, next) => {
+router.post('/Keepsakes', async (req, res, next) => {
     try {
-        await Stats.deleteMany({});
-        const newStatsInfo = await Stats.insertMany(statsInfo);
-        res.render('stats/index.ejs', {statsInfo: newStatsInfo});
+       let finalKeepsakes = {
+        name: req.body.name,
+        type: req.body.type,
+        description: req.body.description,
+        effect: req.body.effect,
+        img: req.body.img,
+       };
+        const newKeepsake = await Keepsakes.create({name: req.body.name});
+        res.redirect('/character_information/Keepsakes');
     } catch(err) {
         console.log(err);
         next();
     }
 })
+
+router.get('/Keepsakes/:name/edit', async (req, res, next) => {
+    try {
+        const keepsakeToBeEdited = await Keepsakes.findOne({name: req.params.name});
+        res.render('keepsakes/edit', {keepsakeToBeEdited});
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.put('/Keepsakes/:name', async (req, res, next) => {
+    try {
+        const keepsakeId = await Keepsakes.findOne({name: req.params.name});
+        const updatedKeepsake = await Keepsakes.findByIdAndUpdate(keepsakeId._id, req.body);
+        res.redirect(`/character_information/Keepsakes/${req.body.name}`);
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+}) 
+
+router.get('/Keepsakes/:name/delete', async (req, res, next) => {
+    try {
+        const keepsakeToBeDeleted = await Keepsakes.findOne({name: req.params.name});
+        res.render('keepsakes/delete', {keepsakeToBeDeleted});
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+
+router.delete('/Keepsakes/:name', async (req, res, next) => {
+    try {
+        const keepsakeId = await Keepsakes.findOne({name: req.params.name});
+        const deletedKeepsake = await Keepsakes.findByIdAndDelete(keepsakeId._id, req.body);
+        res.redirect(`/character_information/Keepsakes`);
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+// Stats routes
+
+router.get('/Stats', async (req, res, next) => {
+    try {
+        // await Stats.deleteMany({});
+        // const newStatsInfo = await Stats.insertMany(statsInfo);
+        const stats = await Stats.find();
+        res.render('stats/index.ejs', {statsInfo: stats});
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.get('/Stats/new', (req, res) => {
+    res.render('stats/new')
+});
+
+router.get('/Stats/:name', async (req, res, next) => {
+    try {
+        const myStatsInfo = await Stats.findOne({name: req.params.name});
+        // console.log(myStatsInfo);
+        res.render('stats/show', {myStatsInfo})
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.post('/Stats', async (req, res, next) => {
+    try {
+        let finalStats = {
+            name: req.body.name,
+            softCap: req.body.softCap,
+            img: req.body.img,
+            description: req.body.description,
+        };
+        const newStat = await Stats.create({name: req.body.name});
+        res.redirect('/character_information/Stats');
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.get('/Stats/:name/edit', async (req, res, next) => {
+    try {
+        const statToBeEdited = await Stats.findOne({name: req.params.name});
+        res.render('stats/edit', {statToBeEdited});
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.put('/Stats/:name', async (req, res, next) => {
+    try {
+        const statId = await Stats.findOne({name: req.params.name});
+        const updatedStat = await Stats.findByIdAndUpdate(statId._id, req.body);
+        res.redirect(`/character_information/Stats/${req.body.name}`);
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.get('/Stats/:name/delete', async (req, res, next) => {
+    try {
+        const statToBeDeleted = await Stats.findOne({name: req.params.name});
+        res.render('stats/delete', {statToBeDeleted});
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.delete('/Stats/:name', async (req, res, next) => {
+    try {
+        const statId = await Stats.findOne({name: req.params.name});
+        const deletedStat = await Stats.findByIdAndDelete(statId._id, req.body);
+        res.redirect(`/character_information/Stats`);
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+// Status Effects routes
+
+router.get('/Status_Effects', async (req, res, next) => {
+    try {
+        // await StatusEffects.deleteMany({});
+        // const newStatusEffectsInfo = await StatusEffects.insertMany(statusEffectsInfo);
+        const statusEffects = await StatusEffects.find();
+        res.render('statusEffects/index.ejs', {statusEffectsInfo: statusEffects});
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.get('/Status_Effects/new', (req, res) => {
+    res.render('statusEffects/new')
+});
 
 router.get('/Status_Effects/:name', async (req, res, next) => {
     try {
@@ -189,24 +346,57 @@ router.get('/Status_Effects/:name', async (req, res, next) => {
     }
 })
 
-// Status Effects routes
-
-router.get('/Status_Effects', async (req, res, next) => {
+router.post('/Status_Effects', async (req, res, next) => {
     try {
-        await StatusEffects.deleteMany({});
-        const newStatusEffectsInfo = await StatusEffects.insertMany(statusEffectsInfo);
-        res.render('statusEffects/index.ejs', {statusEffectsInfo: newStatusEffectsInfo});
+        let finalStatusEffects = {
+            name: req.body.name,
+            img: req.body.img,
+            description: req.body.description,
+        };
+        const newStatusEffect = await StatusEffects.create ({name: req.body.name});
+        res.redirect('/character_information/Status_Effects');
     } catch(err) {
         console.log(err);
         next();
     }
 })
 
-router.get('/Stats/:name', async (req, res, next) => {
+router.get('/Status_Effects/:name/edit', async (req, res, next) => {
     try {
-        const myStatsInfo = await Stats.findOne({name: req.params.name});
-        // console.log(myStatsInfo);
-        res.render('stats/show', {myStatsInfo})
+        const statusEffectToBeEdited = await StatusEffects.findOne({name: req.params.name});
+        res.render('statusEffects/edit', {statusEffectToBeEdited});
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.put('/Status_Effects/:name', async (req, res, next) => {
+    try {
+        const statusEffectId = await StatusEffects.findOne({name: req.params.name});
+        const updatedStatusEffect = await StatusEffects.findByIdAndUpdate(statusEffectId._id, req.body);
+        res.redirect(`/character_information/Status_Effects/${req.body.name}`);
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.get('/Status_Effects/:name/delete', async (req, res, next) => {
+    try {
+        const statusEffectToBeDeleted = await StatusEffects.findOne({name: req.params.name});
+        res.render('statusEffects/delete', {statusEffectToBeDeleted});
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.delete('/Status_Effects/:name', async (req, res, next) => {
+    try {
+        const statusEffectId = await StatusEffects.findOne({name: req.params.name});
+        const statusEffectToBeDeleted = await StatusEffects.findByIdAndDelete(statusEffectId._id, req.body);
+        res.redirect(`/character_information/Status_Effects`);
     } catch(err) {
         console.log(err);
         next();

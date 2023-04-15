@@ -10,7 +10,7 @@ const keepsakesSchema = new mongoose.Schema(
 
         type: {
             type: String,
-            required: [true],
+            // required: [true],
         },
 
         description: {
