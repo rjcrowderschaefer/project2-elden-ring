@@ -8,7 +8,7 @@ const statsSchema = new mongoose.Schema(
             unique: true
         },
         
-        softcap: {
+        softCap: {
             type: String,
         },
 

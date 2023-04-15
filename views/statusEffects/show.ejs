@@ -7,4 +7,7 @@
 <h2>Name: <%= myStatusEffectsInfo.name %></h2>
 <h2>Description: <%= myStatusEffectsInfo.description %></h2>
 
+<a href="/character_information/Status_Effects/<%= myStatusEffectsInfo.name %>/edit">Edit this stat</a><br>
+<a href="/character_information/Status_Effects/<%= myStatusEffectsInfo.name %>/delete">Delete this stat</a>
+
 <%- include('../partials/footer.ejs') %>

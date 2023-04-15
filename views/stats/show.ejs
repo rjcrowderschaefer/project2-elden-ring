@@ -8,4 +8,7 @@
 <h2>Soft Cap: <%= myStatsInfo.softCap %></h2>
 <h2>Description: <%= myStatsInfo.description %></h2>
 
+<a href="/character_information/Stats/<%= myStatsInfo.name %>/edit">Edit this stat</a><br>
+<a href="/character_information/Stats/<%= myStatsInfo.name %>/delete">Delete this stat</a>
+
 <%- include('../partials/footer.ejs') %>
