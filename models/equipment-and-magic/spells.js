@@ -20,25 +20,31 @@ const spellsSchema = new mongoose.Schema(
             type: String
         },
 
-        effect: {
-            type: String
-        },
-
         type: {
             type: String
         },
 
-       class: {
+        class: {
             type: String
         },
 
+        damageType: {
+            type: String
+        },
+        
         requiredMemory: {
             type: String
         },
 
+        whereToFind: {
+            type: String
+        },
+
+        fpCost: {
+            type: String
+        },
+
         requirements: {
-            str: String,
-            dex: String,
             int: String,
             fai: String,
             arc: String,

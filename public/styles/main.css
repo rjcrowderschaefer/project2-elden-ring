@@ -9,11 +9,52 @@ body {
         
 }
 
-
-   
     h1 {
+        font-style: Garamond;
         color: rgb(223, 230, 16);
         background-color: rgba(0, 0, 0, 0.4);
         text-align: center;
-        font-style: Mantinia Regular Font;
+        font-size: 100px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-right: 400px;
+        margin-left: 400px;
+        
     }
+
+    h2 {
+        color: rgb(223, 230, 16);
+        background-color: rgba(0, 0, 0, 0.4);
+        text-align: left;
+        font-style: Garamond;
+        word-wrap: break-word;
+        font-size: 1.5em;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-right: 300px;
+        text-indent: 10px;
+        line-height: 1.8;
+    
+        
+    }
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    img {
+        border-radius: 8px;
+      }
+
+      img:hover {
+        transform: scaleX(-1);
+        
+      }
+     
