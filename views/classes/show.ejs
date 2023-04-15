@@ -2,7 +2,7 @@
 
 <h1>List of Classes</h1>
 
-<img src=<%=myClassesInfo.img %> alt="Image of <%= myClassesInfo.name %>">
+<img src= <%= myClassesInfo.img %> alt="Image of <%= myClassesInfo.name %>">
 
 <h2>Name: <%= myClassesInfo.name %></h2>
 <h2>Soul Level: <%= myClassesInfo.soulLevel %></h2>
@@ -34,6 +34,6 @@
 </ul></h2>
 
 <a href="/character_information/Classes/<%= myClassesInfo.name %>/edit">Edit this class</a><br>
-<a href="/character_information/Classes<%= myClassesInfo.name %>/delete">Delete this class</a>
+<a href="/character_information/Classes/<%= myClassesInfo.name %>/delete">Delete this class</a>
 
 <%- include('../partials/footer.ejs') %>

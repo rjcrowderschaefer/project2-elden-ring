@@ -27,8 +27,8 @@ router.get('', async (req, res, next) => {
 
 router.get('/Classes', async (req, res, next) => {
     try {
-        await Classes.deleteMany({});
-        const newClassesInfo = await Classes.insertMany(classesInfo);
+        // await Classes.deleteMany({});
+        // const newClassesInfo = await Classes.insertMany(classesInfo);
         const classes = await Classes.find();
         res.render('classes/index.ejs', {classesInfo: classes});
     } catch(err) {
@@ -97,7 +97,7 @@ router.post('/Classes', async (req, res, next) => {
 
 router.get('/Classes/:name/edit', async (req, res, next) => {
     try {
-        const classToBeEdited = await Classes.findOne({name: req.params.name})
+        const classToBeEdited = await Classes.findOne({name: req.params.name});
         // console.log(classToBeEdited);
         res.render('classes/edit', {classToBeEdited});
     } catch(err) {
@@ -112,8 +112,29 @@ router.put('/Classes/:name', async (req, res, next) => {
         // console.log(classId[0]._id);
         const updatedClass = await Classes.findByIdAndUpdate(classId._id, req.body);
         // console.log(req.body);
-        res.redirect(`/character_information/Classes/${req.body.name}`)
+        res.redirect(`/character_information/Classes/${req.body.name}`);
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
 
+router.get('/Classes/:name/delete', async (req, res, next) => {
+    try {
+        const classToBeDeleted = await Classes.findOne({name: req.params.name});
+        res.render('classes/delete', {classToBeDeleted});
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.delete('/Classes/:name', async (req, res, next) => {
+    try {
+        const classId = await Classes.findOne({name: req.params.name});
+        const deletedClass = await Classes.findByIdAndDelete(classId._id, req.body);
+        console.log(deletedClass)
+        res.redirect(`/character_information/Classes`);
     } catch(err) {
         console.log(err);
         next();
