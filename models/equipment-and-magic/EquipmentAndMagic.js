@@ -8,6 +8,11 @@ const equipmentAndMagicSchema = new mongoose.Schema(
             unique: true
         },
 
+        urlName: {
+            type: String,
+            required: [true],
+        },
+
         img: {
             type: String,
         }

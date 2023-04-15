@@ -1,0 +1,19 @@
+body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-image: url(https://i.redd.it/k6ef81ik42571.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        
+}
+
+
+   
+    h1 {
+        color: rgb(223, 230, 16);
+        background-color: rgba(0, 0, 0, 0.4);
+        text-align: center;
+        font-style: Mantinia Regular Font;
+    }
