@@ -14,7 +14,7 @@ body {
         color: rgb(223, 230, 16);
         background-color: rgba(0, 0, 0, 0.4);
         text-align: center;
-        font-size: 100px;
+        font-size: 90px;
         margin-top: 100px;
         margin-bottom: 100px;
         margin-right: 400px;
@@ -29,10 +29,10 @@ body {
         font-style: Garamond;
         word-wrap: break-word;
         font-size: 1.5em;
-        margin-top: 1000px;
-        margin-bottom: 100px;
-        margin-right: 100px;
-        margin-left: 1000px;
+        margin-top: 100px;
+        margin-bottom: 1000px;
+        margin-right: 1000px;
+        margin-left: 100px;
         text-indent: 100px;
         line-height: 1.9;
         margin: auto;
