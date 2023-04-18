@@ -7,6 +7,87 @@ const CreaturesAndEnemies = [
         whereToFind: 'Pretty much everywhere',
         weakTo: 'Fire, Lightning',
         strongVS: 'All status affects',
+    },
+    {
+        name: '',
+        img: '',
+        description: '',
+        damageType: '',
+        whereToFind: '',
+        weakTo: '',
+        strongVS: ''
+    },
+    {
+        name: '',
+        img: '',
+        description: '',
+        damageType: '',
+        whereToFind: '',
+        weakTo: '',
+        strongVS: ''
+    },
+    {
+        name: '',
+        img: '',
+        description: '',
+        damageType: '',
+        whereToFind: '',
+        weakTo: '',
+        strongVS: ''
+    },
+    {
+        name: '',
+        img: '',
+        description: '',
+        damageType: '',
+        whereToFind: '',
+        weakTo: '',
+        strongVS: ''
+    },
+    {
+        name: '',
+        img: '',
+        description: '',
+        damageType: '',
+        whereToFind: '',
+        weakTo: '',
+        strongVS: ''
+    },
+    {
+        name: '',
+        img: '',
+        description: '',
+        damageType: '',
+        whereToFind: '',
+        weakTo: '',
+        strongVS: ''
+    },
+    {
+        name: '',
+        img: '',
+        description: '',
+        damageType: '',
+        whereToFind: '',
+        weakTo: '',
+        strongVS: ''
+    },
+    {
+        name: '',
+        img: '',
+        description: '',
+        damageType: '',
+        whereToFind: '',
+        weakTo: '',
+        strongVS: ''
+    },
+    {
+        name: '',
+        img: '',
+        description: '',
+        damageType: '',
+        whereToFind: '',
+        weakTo: '',
+        strongVS: ''
     }
 ]
 module.exports = CreaturesAndEnemies;

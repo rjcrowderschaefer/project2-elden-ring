@@ -6,6 +6,69 @@ const LegacyDungeons = [
         img2: 'https://cdn.holdtoreset.com/wp-content/uploads/2022/02/25144944/elden-ring-shabiri-grapes-location1.jpg',
         bosses: 'Gracted Scion, Lion Guardian, Ulcerated Tree Spirit, Godrick The Grafted',
         NPCs: 'Gatekeeper Gustoc, Sorcerer Rogier, Nipheli Loux, Kenneth Haight',
+    },
+    {
+        name: '',
+        img1: '',
+        img2: '',
+        bosses: '',
+        NPCs: ''
+    },
+    {
+        name: '',
+        img1: '',
+        img2: '',
+        bosses: '',
+        NPCs: ''
+    },
+    {
+        name: '',
+        img1: '',
+        img2: '',
+        bosses: '',
+        NPCs: ''
+    },
+    {
+        name: '',
+        img1: '',
+        img2: '',
+        bosses: '',
+        NPCs: ''
+    },
+    {
+        name: '',
+        img1: '',
+        img2: '',
+        bosses: '',
+        NPCs: ''
+    },
+    {
+        name: '',
+        img1: '',
+        img2: '',
+        bosses: '',
+        NPCs: ''
+    },
+    {
+        name: '',
+        img1: '',
+        img2: '',
+        bosses: '',
+        NPCs: ''
+    },
+    {
+        name: '',
+        img1: '',
+        img2: '',
+        bosses: '',
+        NPCs: ''
+    },
+    {
+        name: '',
+        img1: '',
+        img2: '',
+        bosses: '',
+        NPCs: ''
     }
 ]
 module.exports = LegacyDungeons;
