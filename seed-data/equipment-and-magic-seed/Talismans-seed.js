@@ -131,4 +131,5 @@ const Talismans = [
     },
 
 ]
+
 module.exports = Talismans;

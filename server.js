@@ -6,11 +6,9 @@ const characterInformationController = require('./controllers/characterInformati
 const equipmentMagicController = require('./controllers/equipmentMagic');
 // const bossesController = require('./controllers/bosses');
 // const creaturesEnemiesController = require('./controllers/creaturesEnemies');
-// const damageTypesController = require('./controllers/damageTypes');
 // const legacyDungeonsController = require('./controllers/legacyDungeons');
 // const npcsController = require('./controllers/npcs');
 // const statusEffectsController = require('./controllers/statusEffects');
-// const talismansController = require('./controllers/talismans');
 // const upgradesController = require('./controllers/upgrades');
 // const weaponsController = require('./controllers/weapons');
 // const worldInformationController = require('./controllers/worldInformation');
@@ -39,8 +37,6 @@ app.use('/character_information', characterInformationController);
 
 app.use('/equipment_magic', equipmentMagicController);
 // app.use('/equipment_magic/weapons', weaponsController);
-// app.use('/equipment_magic/damage_types', damageTypesController);
-// app.use('/equipment_magic/talismans', talismansController);
 // app.use('/equipment_magic/upgrades', upgradesController)
 
 // app.use('/world_information', worldInformationController);

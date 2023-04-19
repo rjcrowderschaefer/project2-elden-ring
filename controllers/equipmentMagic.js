@@ -5,6 +5,8 @@ const EquipmentAndMagic = require('../models/equipment-and-magic/EquipmentAndMag
 const equipmentAndMagicInfo = require('../seed-data/equipment-and-magic-seed/Equipment-and-magic-seed');
 const DamageTypes = require('../models/equipment-and-magic/DamageTypes');
 const damageTypesInfo = require('../seed-data/equipment-and-magic-seed/DamageTypes-seed');
+const Talismans = require('../models/equipment-and-magic/talismans');
+const talismansInfo = require('../seed-data/equipment-and-magic-seed/Talismans-seed');
 
 router.get('', async (req, res, next) => {
     try {
@@ -105,6 +107,97 @@ router.delete('/Damage_Types/:name', async (req, res, name) => {
 })
 
 // Talismans routes
+
+router.get('/Talismans', async (req, res, next) => {
+    try {
+        // await Talismans.deleteMany({});
+        // const newTalismansInfo = await Talismans.insertMany(talismansInfo);
+        const talismans = await Talismans.find();
+        res.render('talismans/index.ejs', {talismansInfo: talismans});
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.get('/Talismans/new', (req, res) => {
+    res.render('talismans/new')
+});
+
+router.get('/Talismans/:name', async (req, res, next) => {
+    try {
+        const myTalismansInfo = await Talismans.findOne({name: req.params.name});
+        res.render('talismans/show', {myTalismansInfo});
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.post('/Talismans', async (req, res, next) => {
+    try {
+        let finalTalisman = {
+            name: req.body.name,
+            img: req.body.img,
+            weight: req.body.weight,
+            description: req.body.description,
+            effect: req.body.effect,
+            upgradedVersion: req.body.upgradedVersion,
+            whereToFind: {
+                regular: req.body.regular,
+                plusOne: req.body.plusOne,
+                plusTwo: req.body.plusTwo,
+            }
+        };
+        const newTalisman = await Talismans.create({name: req.body.name});
+        res.redirect('/equipment_magic/Talismans');
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.get('/Talismans/:name/edit', async (req, res, next) => {
+    try {
+        const talismanToBeEdited = await Talismans.findOne({name: req.params.name});
+        res.render('talismans/edit', {talismanToBeEdited});
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.put('/Talismans/:name', async (req, res, next) => {
+    try {
+        const talismansId = await Talismans.findOne({name: req.params.name});
+        const updatedTalisman = await Talismans.findByIdAndUpdate(talismansId._id, req.body);
+        res.redirect(`/equipment_magic/Talismans/${req.body.name}`);
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.get('/Talismans/:name/:delete', async (req, res, next) => {
+    try {
+        const talismanToBeDeleted = await Talismans.findOne({name: req.params.name});
+        res.render('talismans/delete', {talismanToBeDeleted});
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.delete('/Talismans/:name', async (req, res, next) => {
+    try {
+        const talismanId = await Talismans.findOne({name: req.params.name});
+        const deletedTalisman = await Talismans.findByIdAndDelete(talismanId._id, req.body);
+        res.redirect(`/equipment_magic/Talismans`);
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
 
 // Spells routes
 
