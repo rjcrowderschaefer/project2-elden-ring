@@ -1,6 +1,6 @@
 const mongoose = require('../../config/connection');
 
-const bossesSchema = new mongoose.Schema(
+const spellsSchema = new mongoose.Schema(
     {
         name: {
             type: String,
@@ -8,56 +8,51 @@ const bossesSchema = new mongoose.Schema(
             unique: true
         },
 
-        img1: {
-            type: String
+        img: {
+            type: String,
         },
-
-        img2: {
-            type: String
-        },
-
-        img3: {
-            type: String
-        },
-
+        
         description: {
-            type: String
+            type: String,
         },
 
         officalKobyRating: {
             type: String
         },
 
-        strongVS: {
+        type: {
             type: String
         },
 
-        weakTo: {
-            type: String
-        },
-
-        health: {
+        class: {
             type: String
         },
 
         damageType: {
             type: String
         },
-
-        location: {
+        
+        requiredMemory: {
             type: String
         },
 
-        drops: {
+        whereToFind: {
             type: String
         },
 
-        quote: {
+        fpCost: {
             type: String
-        }
+        },
+
+        requirements: {
+            int: String,
+            fai: String,
+            arc: String,
+        },
+
     }
 );
 
-const Bosses = mongoose.model('bosses', bossesSchema);
+const Spells = mongoose.model('spells', spellsSchema);
 
-module.exports = Bosses
+module.exports = Spells
