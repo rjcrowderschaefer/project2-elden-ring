@@ -9,9 +9,13 @@ body {
         background-image: url(https://i.redd.it/k6ef81ik42571.png);
         background-size: cover;
         background-repeat: no-repeat;
+<<<<<<< HEAD
         background-attachment: fixed;
         
         
+=======
+        background-attachment: fixed;   
+>>>>>>> 5e9bc4f350fa6b7cc2a008018f858c80e840d59f
 }
 
     h1 {
@@ -24,7 +28,10 @@ body {
         margin-bottom: 100px;
         margin-right: 400px;
         margin-left: 400px;
+<<<<<<< HEAD
         
+=======
+>>>>>>> 5e9bc4f350fa6b7cc2a008018f858c80e840d59f
     }
 
     h2 {
@@ -42,9 +49,12 @@ body {
         line-height: 1.9;
         margin: auto;
         display: block;
+<<<<<<< HEAD
        
         
         
+=======
+>>>>>>> 5e9bc4f350fa6b7cc2a008018f858c80e840d59f
     }
 
    
@@ -56,14 +66,18 @@ body {
     background-color: rgba(0, 0, 0, 0.4);
    }
 
+<<<<<<< HEAD
    
    
+=======
+>>>>>>> 5e9bc4f350fa6b7cc2a008018f858c80e840d59f
    a:hover {
     color: rgb(0, 255, 68);
     text-decoration: none;
   }
 
    
+<<<<<<< HEAD
    
    
    
@@ -82,6 +96,9 @@ body {
         transform: scaleX(-1);
         
       }
+=======
+
+>>>>>>> 5e9bc4f350fa6b7cc2a008018f858c80e840d59f
      
     label {
         color: rgb(223, 230, 16);
@@ -96,5 +113,22 @@ body {
         
     }
 
+<<<<<<< HEAD
     
     
+=======
+
+
+
+    img {
+        border-radius: 8px;
+        width: 17%;
+      }
+
+      img:hover {
+        transform: scaleX(-1);
+      }
+    
+
+      
+>>>>>>> 5e9bc4f350fa6b7cc2a008018f858c80e840d59f

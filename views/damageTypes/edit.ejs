@@ -1,0 +1,25 @@
+<%- include('../partials/header.ejs') %>
+
+<h1>Edit the <%= damageTypeToBeEdited.name %> damage type</h1>
+
+<form action="/equipment_magic/Damage_Types/<%= damageTypeToBeEdited.name %>?_method=PUT" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" value="<%= damageTypeToBeEdited.name%>">
+    <br>
+    <label for="effectiveAgainst">Effective Against:</label>
+    <input type="text" name="effectiveAgainst" id="effectiveAgainst" value="<%= damageTypeToBeEdited.effectiveAgainst%>">
+    <br>
+    <label for="ineffectiveAgainst">Ineffective Against:</label>
+    <input type="text" name="ineffectiveAgainst" id="ineffectiveAgainst" value="<%= damageTypeToBeEdited.ineffectiveAgainst%>">
+    <br>
+    <label for="notes">Notes:</label>
+    <input type="text" name="notes" id="notes" value="<%= damageTypeToBeEdited.notes%>">
+    <br>
+    <label for="img">Image URL:</label>
+    <input type="text" name="img" id="img" value="<%= damageTypeToBeEdited.img%>">
+    <br>
+    <input type="submit" value="Update <%= damageTypeToBeEdited.name%> damage type">
+</form>
+
+
+<%- include('../partials/footer.ejs') %>

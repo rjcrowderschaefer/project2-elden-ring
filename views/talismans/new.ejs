@@ -1,0 +1,36 @@
+<%- include('../partials/header.ejs') %>
+<h1>Add a new talisman</h1>
+
+<form action="/equipment_magic/Talismans" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name">
+    <br>
+    <label for="weight">Weight:</label>
+    <input type="text" name="weight" id="weight">
+    <br>
+    <label for="description">Description:</label>
+    <input type="text" name="description" id="description">
+    <br>
+    <label for="effect">Effect:</label>
+    <input type="text" name="effect" id="effect">
+    <br>
+    <label for="upgradedVersion">Upgraded Version:</label>
+    <input type="text" name="upgradedVersion" id="upgradedVersion">
+    <br>
+    <label for="regular">Where to find - Regular:</label>
+    <input type="text" name="regular" id="regular">
+    <br>
+    <label for="plusOne">Where to find - Plus One:</label>
+    <input type="text" name="plusOne" id="plusOne">
+    <br>
+    <label for="plusTwo">Where to find - Plus Two:</label>
+    <input type="text" name="plusTwo" id="plusTwo">
+    <br>
+    <label for="img">Image URL:</label>
+    <input type="text" name="img" id="img">
+    <br>
+    <input type="submit" value="Add new talisman">
+</form>
+
+
+<%- include('../partials/footer.ejs') %>

@@ -7,6 +7,7 @@ const NPCs = [
         role: 'Main NPC - Affects Endings',
     },
     {
+<<<<<<< HEAD
         name: 'Patches',
         img: 'https://eldenring.wiki.fextralife.com/file/Elden-Ring/patches_bosses_elden_ring_wiki_guide_300x.jpg',
         description: 'Patches the Untethered is a Merchant, NPC, and Field Boss in Elden Ring. Patches is a recurring character in From Software games, usually playing the part of a trickster. He can be found in Murkwater Cave. This is an optional boss as players do not need to defeat him to advance. During combat, when Patches reaches half health, he will surrender. If the surrender is accepted, he will open up a shop in Murkwater Cave.',
@@ -68,6 +69,69 @@ const NPCs = [
         description: 'Tanith is an NPC in Elden Ring. Tanith is the head of the Volcano Manor, and asks the players about joining forces against the Fingers. If you decide to join her quest, you will receive particular missions as well as access to some new Npcs.',
         location: 'Volcano Manor',
         role: 'Quest NPC'
+=======
+        name: '',
+        img: '',
+        description: '',
+        location: '',
+        role: ''
+    },
+    {
+        name: '',
+        img: '',
+        description: '',
+        location: '',
+        role: ''
+    },
+    {
+        name: '',
+        img: '',
+        description: '',
+        location: '',
+        role: ''
+    },
+    {
+        name: '',
+        img: '',
+        description: '',
+        location: '',
+        role: ''
+    },
+    {
+        name: '',
+        img: '',
+        description: '',
+        location: '',
+        role: ''
+    },
+    {
+        name: '',
+        img: '',
+        description: '',
+        location: '',
+        role: ''
+    },
+    {
+        name: '',
+        img: '',
+        description: '',
+        location: '',
+        role: ''
+    },
+    {
+        name: '',
+        img: '',
+        description: '',
+        location: '',
+        role: ''
+    },
+    {
+        name: '',
+        img: '',
+        description: '',
+        location: '',
+        role: ''
+>>>>>>> 5e9bc4f350fa6b7cc2a008018f858c80e840d59f
     }
 ]
 module.exports = NPCs;

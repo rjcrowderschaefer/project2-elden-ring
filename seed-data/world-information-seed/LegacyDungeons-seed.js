@@ -8,6 +8,7 @@ const LegacyDungeons = [
         NPCs: 'Gatekeeper Gustoc, Sorcerer Rogier, Nipheli Loux, Kenneth Haight',
     },
     {
+<<<<<<< HEAD
         name: 'Academy of Raya Lucaria',
         img1: 'https://eip.gg/wp-content/uploads/2022/05/Academy-of-Raya-Lucaria-Walkthrough-Featured-Image-v2.jpg',
         img2: 'https://cdn.guidestash.com/wp-content/uploads/2022/03/31201728/Academy-Glintstone-Key-Locations.jpg',
@@ -69,6 +70,69 @@ const LegacyDungeons = [
         img2: 'data:image/jpeg;base64,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',
         bosses: 'Astel, Naturalborn of the Void, Dragonkin Soldier',
         NPCs: 'None'
+=======
+        name: '',
+        img1: '',
+        img2: '',
+        bosses: '',
+        NPCs: ''
+    },
+    {
+        name: '',
+        img1: '',
+        img2: '',
+        bosses: '',
+        NPCs: ''
+    },
+    {
+        name: '',
+        img1: '',
+        img2: '',
+        bosses: '',
+        NPCs: ''
+    },
+    {
+        name: '',
+        img1: '',
+        img2: '',
+        bosses: '',
+        NPCs: ''
+    },
+    {
+        name: '',
+        img1: '',
+        img2: '',
+        bosses: '',
+        NPCs: ''
+    },
+    {
+        name: '',
+        img1: '',
+        img2: '',
+        bosses: '',
+        NPCs: ''
+    },
+    {
+        name: '',
+        img1: '',
+        img2: '',
+        bosses: '',
+        NPCs: ''
+    },
+    {
+        name: '',
+        img1: '',
+        img2: '',
+        bosses: '',
+        NPCs: ''
+    },
+    {
+        name: '',
+        img1: '',
+        img2: '',
+        bosses: '',
+        NPCs: ''
+>>>>>>> 5e9bc4f350fa6b7cc2a008018f858c80e840d59f
     }
 ]
 module.exports = LegacyDungeons;

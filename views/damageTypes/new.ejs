@@ -1,0 +1,24 @@
+<%- include('../partials/header.ejs') %>
+<h1>Add a new damage type</h1>
+
+<form action="/equipment_magic/Damage_Types" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name">
+    <br>
+    <label for="effectiveAgainst">Effective Against:</label>
+    <input type="text" name="effectiveAgainst" id="effectiveAgainst">
+    <br>
+    <label for="ineffectiveAgainst">Ineffective Against:</label>
+    <input type="text" name="ineffectiveAgainst" id="ineffectiveAgainst">
+    <br>
+    <label for="notes">Notes:</label>
+    <input type="text" name="notes" id="notes">
+    <br>
+    <label for="img">Image URL:</label>
+    <input type="text" name="img" id="img">
+   
+    <input type="submit" value="Add new damage type">
+</form>
+
+
+<%- include('../partials/footer.ejs') %>

@@ -15,11 +15,15 @@ const enemiesSchema = new mongoose.Schema(
         description: {
             type: String
         },
+<<<<<<< HEAD
 
         damageType: {
             type: String
         },
 
+=======
+        
+>>>>>>> 5e9bc4f350fa6b7cc2a008018f858c80e840d59f
         whereToFind: {
             type: String
         },
