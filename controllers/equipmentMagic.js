@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-// const express = require('express');
-// const router = express.Router();
-
-// const { EquipmentMagic } = require('../models');
-
-// module.exports = router;
-=======
 const express = require('express');
 const router = express.Router();
 
@@ -213,4 +205,3 @@ router.delete('/Talismans/:name', async (req, res, next) => {
 
 
 module.exports = router;
->>>>>>> 5e9bc4f350fa6b7cc2a008018f858c80e840d59f
