@@ -1,0 +1,48 @@
+<%- include('../partials/header.ejs') %>
+<h1>Add a new spell</h1>
+
+<form action="/equipment_magic/Spells" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name">
+    <br>
+    <label for="description">Description:</label>
+    <input type="text" name="description" id="description">
+    <br>
+    <label for="officialKobyRating">Official Koby Rating:</label>
+    <input type="text" name="officialKobyRating" id="officialKobyRating">
+    <br>
+    <label for="type">Type:</label>
+    <input type="text" name="type" id="type">
+    <br>
+    <label for="class">Class:</label>
+    <input type="text" name="class" id="class">
+    <br>
+    <label for="damageType">Damage Type:</label>
+    <input type="text" name="damageType" id="damageType">
+    <br>
+    <label for="requiredMemory">Required Memory:</label>
+    <input type="text" name="requiredMemory" id="requiredMemory">
+    <br>
+    <label for="whereToFind">Where To Find:</label>
+    <input type="text" name="whereToFind" id="whereToFind">
+    <br>
+    <label for="fpCost">FP Cost:</label>
+    <input type="text" name="fpCost" id="fpCost">
+    <br>
+    <label for="int">Int:</label>
+    <input type="text" name="int" id="int">
+    <br>
+    <label for="fai">Fai:</label>
+    <input type="text" name="fai" id="fai">
+    <br>
+    <label for="arc">Arc:</label>
+    <input type="text" name="arc" id="arc">
+    <br>
+    <label for="img">Image URL:</label>
+    <input type="text" name="img" id="img">
+   
+    <input type="submit" value="Add new spell">
+</form>
+
+
+<%- include('../partials/footer.ejs') %>
