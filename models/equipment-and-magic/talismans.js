@@ -37,6 +37,6 @@ const talismansSchema = new mongoose.Schema(
     }
 );
 
-const Talismans = mongoose.model('Talismans', talismansSchema);
+const Talismans = mongoose.model('talismans', talismansSchema);
 
 module.exports = Talismans

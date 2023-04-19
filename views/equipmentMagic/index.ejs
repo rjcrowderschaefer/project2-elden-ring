@@ -1,0 +1,10 @@
+<%- include('../partials/header.ejs') %>
+<h1>Equipment and Magic</h1>
+<% for(let i = 0; i < equipmentAndMagicInfo.length; i++) { %>
+
+<img src=<%= equipmentAndMagicInfo[i].img %>><br>
+<h2>Name: <a href = '/equipment_magic/<%= equipmentAndMagicInfo[i].urlName %>'>
+    <%= equipmentAndMagicInfo[i].name %></a></h2>
+
+<% } %>
+<%- include('../partials/footer.ejs') %>

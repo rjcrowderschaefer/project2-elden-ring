@@ -1,0 +1,12 @@
+<%- include('../partials/header.ejs') %>
+
+<h1>Are you sure you want to delete the <%= talismanToBeDeleted.name %>?</h1>
+
+    <form action="/equipment_magic/Talismans/<%= talismanToBeDeleted.name%>?_method=DELETE" method="POST">
+        <input type="submit" value="Yes, delete.">        
+    </form>
+    <a href="/equipment_magic/Talismans/<%= talismanToBeDeleted.name %>">
+        <button>No, take me back</button>
+    </a>
+
+<%- include('../partials/footer.ejs') %>
