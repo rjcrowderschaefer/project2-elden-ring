@@ -1,0 +1,10 @@
+<%- include('../partials/header.ejs') %>
+<h1>Character Information</h1>
+<% for(let i = 0; i < characterInfo.length; i++) { %>
+
+<img src=<%= characterInfo[i].img %>><br>
+<h2>Name: <a href = 'character_information/<%= characterInfo[i].urlName %>'>
+    <%= characterInfo[i].name %></a></h2>
+
+<% } %>
+<%- include('../partials/footer.ejs') %>

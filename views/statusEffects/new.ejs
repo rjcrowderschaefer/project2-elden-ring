@@ -1,0 +1,18 @@
+<%- include('../partials/header.ejs') %>
+<h1>Add a new status effect</h1>
+
+<form action="/character_information/Status_Effects" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name">
+    <br>
+    <label for="description">Description:</label>
+    <input type="text" name="description" id="description">
+    <br>
+    <label for="img">Image URL:</label>
+    <input type="text" name="img" id="img">
+    <br>
+    <input type="submit" value="Add new status effect">
+</form>
+
+
+<%- include('../partials/footer.ejs') %>

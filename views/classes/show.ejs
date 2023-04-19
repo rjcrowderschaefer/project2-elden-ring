@@ -1,0 +1,39 @@
+<%- include('../partials/header.ejs') %>
+
+<h1>List of Classes</h1>
+
+<img src= <%= myClassesInfo.img %> alt="Image of <%= myClassesInfo.name %>">
+
+<h2>Name: <%= myClassesInfo.name %></h2>
+<h2>Soul Level: <%= myClassesInfo.soulLevel %></h2>
+<h2>Description: <%= myClassesInfo.description %></h2>
+<h2>Stats:<ul>
+    <li>Vigor: <%= myClassesInfo.stats.vigor %></li>
+    <li>Mind: <%= myClassesInfo.stats.mind %></li>
+    <li>Endurance: <%= myClassesInfo.stats.endurance %></li>
+    <li>Strength: <%= myClassesInfo.stats.strength %></li>
+    <li>Dexterity: <%= myClassesInfo.stats.dex %></li>
+    <li>Intelligence: <%= myClassesInfo.stats.int %></li>
+    <li>Faith: <%= myClassesInfo.stats.fai %></li>
+    <li>Arcane: <%= myClassesInfo.stats.arc %></li>
+</ul></h2>
+<h2>Weapons:<ul>
+    <li>Weapon One: <%= myClassesInfo.weapons.weapon1 %></li>
+    <li>Weapon Two: <%= myClassesInfo.weapons.weapon2 %></li>
+    <li>Weapon Three: <%= myClassesInfo.weapons.weapon3 %></li>
+</ul></h2>
+<h2>Spells:<ul>
+    <li>Spell One: <%= myClassesInfo.spells.spell1 %></li>
+    <li>Spell Two: <%= myClassesInfo.spells.spell2 %></li>
+</ul></h2>
+<h2>Armor:<ul>
+    <li>Head: <%= myClassesInfo.armor.head %></li>
+    <li>Chest: <%= myClassesInfo.armor.chest %></li>
+    <li>Hands: <%= myClassesInfo.armor.hands %></li>
+    <li>Legs: <%= myClassesInfo.armor.legs %></li>
+</ul></h2>
+
+<a href="/character_information/Classes/<%= myClassesInfo.name %>/edit">Edit this class</a><br>
+<a href="/character_information/Classes/<%= myClassesInfo.name %>/delete">Delete this class</a>
+
+<%- include('../partials/footer.ejs') %>

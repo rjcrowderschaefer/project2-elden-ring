@@ -1,0 +1,100 @@
+@import url(//db.onlinewebfonts.com/c/9e991273bb4997c0b4be46bce5427daf?family=MantiniaW00-Regular);
+
+
+
+body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-image: url(https://i.redd.it/k6ef81ik42571.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        
+        
+}
+
+    h1 {
+        font-family: "MantiniaW00-Regular";
+        color: rgb(223, 230, 16);
+        background-color: rgba(0, 0, 0, 0.4);
+        text-align: center;
+        font-size: 84px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-right: 400px;
+        margin-left: 400px;
+        
+    }
+
+    h2 {
+        color: rgb(223, 230, 16);
+        background-color: rgba(0, 0, 0, 0.4);
+        text-align: left;
+        font-family: "MantiniaW00-Regular";
+        word-wrap: break-word;
+        font-size: 1.5em;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-right: 1000px;
+        margin-left: 1000px;
+        text-indent: 10px;
+        line-height: 1.9;
+        margin: auto;
+        display: block;
+       
+        
+        
+    }
+
+   
+   a:link {
+    color: rgb(223, 230, 16);
+    font-size:1.75em;
+    font-family: "MantiniaW00-Regular";
+    margin-left: 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+   }
+
+   
+   
+   a:hover {
+    color: rgb(0, 255, 68);
+    text-decoration: none;
+  }
+
+   
+   
+   
+   
+   
+   
+   
+    img {
+        border-radius: 8px;
+        width: 17%;
+        
+      
+
+      }
+
+      img:hover {
+        transform: scaleX(-1);
+        
+      }
+     
+    label {
+        color: rgb(223, 230, 16);
+        background-color: rgba(0, 0, 0, 0.4);
+        font-size: 1.5em;
+        font-style: Garamond;
+        font-weight: bold;
+        display: block;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-right: 1000px;
+        
+    }
+
+    
+    
