@@ -7,6 +7,8 @@ const DamageTypes = require('../models/equipment-and-magic/DamageTypes');
 const damageTypesInfo = require('../seed-data/equipment-and-magic-seed/DamageTypes-seed');
 const Talismans = require('../models/equipment-and-magic/talismans');
 const talismansInfo = require('../seed-data/equipment-and-magic-seed/Talismans-seed');
+const Spells = require('../models/equipment-and-magic/spells');
+const spellsInfo = require('../seed-data/equipment-and-magic-seed/Spells-seed');
 
 router.get('', async (req, res, next) => {
     try {
@@ -200,6 +202,59 @@ router.delete('/Talismans/:name', async (req, res, next) => {
 })
 
 // Spells routes
+
+router.get('/Spells', async (req, res, next) => {
+    try {
+        // await Spells.deleteMany({});
+        // const newSpellsInfo = await Spells.insertMany(spellsInfo);
+        const spells = await Spells.find();
+        res.render(`spells/index.ejs`, {spellsInfo});
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.get('/Spells/new', (req, res) => {
+    res.render('spells/new')
+});
+
+router.get('/Spells/:name', async (req, res, next) => {
+    try {
+        const mySpellsInfo = await Spells.findOne({name: req.params.name});
+        res.render('spells/show', {mySpellsInfo});
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.post('/Spells', async (req, res, next) => {
+    try {
+        let finalSpell = {
+            name: req.body.name,
+            img: req.body.img,
+            description: req.body.description,
+            officialKobyRating: req.body.officialKobyRating,
+            type: req.body.type,
+            class: req.body.class,
+            damageType: req.body.damageType,
+            requiredMemory: req.body.requiredMemory,
+            whereToFind: req.body.whereToFind,
+            fpCost: req.body.fpCost,
+            requirements: {
+                int: req.body.int,
+                fai: req.body.fai,
+                arc: req.body.arc,
+            }
+        };
+        const newSpell = await Spells.create({name: req.body.name});
+        res.redirect('/equipment_magic/Spells');
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
 
 // Weapons routes
 

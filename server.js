@@ -9,7 +9,7 @@ const equipmentMagicController = require('./controllers/equipmentMagic');
 // const legacyDungeonsController = require('./controllers/legacyDungeons');
 // const npcsController = require('./controllers/npcs');
 // const statusEffectsController = require('./controllers/statusEffects');
-// const upgradesController = require('./controllers/upgrades');
+// const spellsController = require('./controllers/spells');
 // const weaponsController = require('./controllers/weapons');
 // const worldInformationController = require('./controllers/worldInformation');
 
@@ -37,7 +37,7 @@ app.use('/character_information', characterInformationController);
 
 app.use('/equipment_magic', equipmentMagicController);
 // app.use('/equipment_magic/weapons', weaponsController);
-// app.use('/equipment_magic/upgrades', upgradesController)
+// app.use('/equipment_magic/spells', spellsController)
 
 // app.use('/world_information', worldInformationController);
 // app.use('/world_information/bosses', bossesController);
