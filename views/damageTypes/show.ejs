@@ -1,0 +1,15 @@
+<%- include('../partials/header.ejs') %>
+
+<h1>List of Damage Types</h1>
+
+<img src= <%= myDamageTypeInfo.img %> alt="Image of <%= myDamageTypeInfo.name %>">
+
+<h2>Name: <%= myDamageTypeInfo.name %></h2>
+<h2>Effective Against: <%= myDamageTypeInfo.effectiveAgainst %></h2>
+<h2>Ineffective Against: <%= myDamageTypeInfo.ineffectiveAgainst %></h2>
+<h2>Notes: <%= myDamageTypeInfo.notes %></h2>
+
+<a href="/equipment_magic/Damage_Types/<%= myDamageTypeInfo.name %>/edit">Edit this class</a><br>
+<a href="/equipment_magic/Damage_Types/<%= myDamageTypeInfo.name %>/delete">Delete this class</a>
+
+<%- include('../partials/footer.ejs') %>

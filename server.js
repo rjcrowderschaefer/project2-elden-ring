@@ -3,10 +3,10 @@ const app = express();
 const PORT = 4001;
 const methodOveride = require('method-override');
 const characterInformationController = require('./controllers/characterInformation');
+const equipmentMagicController = require('./controllers/equipmentMagic');
 // const bossesController = require('./controllers/bosses');
 // const creaturesEnemiesController = require('./controllers/creaturesEnemies');
 // const damageTypesController = require('./controllers/damageTypes');
-// const equipmentMagicController = require('./controllers/equipmentMagic');
 // const legacyDungeonsController = require('./controllers/legacyDungeons');
 // const npcsController = require('./controllers/npcs');
 // const statusEffectsController = require('./controllers/statusEffects');
@@ -36,9 +36,8 @@ app.get('/', (req, res) => {
 })
 
 app.use('/character_information', characterInformationController);
-// app.use('/character_information', statusEffectsController);
 
-// app.use('/equipment_magic', equipmentMagicController);
+app.use('/equipment_magic', equipmentMagicController);
 // app.use('/equipment_magic/weapons', weaponsController);
 // app.use('/equipment_magic/damage_types', damageTypesController);
 // app.use('/equipment_magic/talismans', talismansController);

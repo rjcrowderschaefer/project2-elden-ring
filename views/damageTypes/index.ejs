@@ -1,0 +1,11 @@
+<%- include('../partials/header.ejs') %>
+<h1>Damage Types</h1>
+
+<h2><a href="/equipment_magic/Damage_Types/new">Add new damage type</a></h2>
+
+<% for(let i = 0; i < damageTypesInfo.length; i++) { %>
+<img src=<%= damageTypesInfo[i].img %>><br>
+<a href = '/equipment_magic/Damage_Types/<%= damageTypesInfo[i].name %>'><h2>Name: <%= damageTypesInfo[i].name %></h2></a>
+<% } %>
+
+<%- include('../partials/footer.ejs') %>
