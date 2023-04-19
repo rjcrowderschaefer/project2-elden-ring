@@ -15,11 +15,7 @@ const enemiesSchema = new mongoose.Schema(
         description: {
             type: String
         },
-
-        damageType: {
-            type: String
-        },
-
+        
         whereToFind: {
             type: String
         },
