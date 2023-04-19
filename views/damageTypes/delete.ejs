@@ -1,0 +1,12 @@
+<%- include('../partials/header.ejs') %>
+
+<h1>Are you sure you want to delete the <%= damageTypeToBeDeleted.name %> damage type?</h1>
+
+    <form action="/equipment_magic/Damage_Types/<%= damageTypeToBeDeleted.name%>?_method=DELETE" method="POST">
+        <input type="submit" value="Yes, delete.">        
+    </form>
+    <a href="/equipment_magic/Damage_Types/<%= damageTypeToBeDeleted.name %>">
+        <button>No, take me back</button>
+    </a>
+
+<%- include('../partials/footer.ejs') %>
