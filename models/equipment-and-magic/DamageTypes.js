@@ -18,9 +18,6 @@ const damageTypesSchema = new mongoose.Schema(
 
         notes: {
             type: String
-        },
-        img: {
-            type: String
         }
     }
 );

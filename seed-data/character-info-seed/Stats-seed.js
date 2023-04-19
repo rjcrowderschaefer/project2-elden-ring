@@ -15,7 +15,7 @@ const Stats = [
         name: 'Endurnace',
         softCap: '50',
         img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6mptdO-wO51Rezmg0R436Bu8L66ulgXwzag&usqp=CAU',
-        description: 'Attribute governing Stamina. Also affects Robustness. Determines how heavy your equipment can be, a.k.a. Equip Load.'
+        discription: 'Attribute governing Stamina. Also affects Robustness. Determines how heavy your equipment can be, a.k.a. Equip Load.'
     },
     {
         name: 'Strength',
