@@ -5,7 +5,7 @@ const spellsSchema = new mongoose.Schema(
         name: {
             type: String,
             required: [true],
-            unique: true
+            // unique: true
         },
 
         img: {
@@ -16,32 +16,32 @@ const spellsSchema = new mongoose.Schema(
             type: String,
         },
 
-        officalKobyRating: {
-            type: String
+        officialKobyRating: {
+            type: String,
         },
 
         type: {
-            type: String
+            type: String,
         },
 
         class: {
-            type: String
+            type: String,
         },
 
         damageType: {
-            type: String
+            type: String,
         },
         
         requiredMemory: {
-            type: String
+            type: String,
         },
 
         whereToFind: {
-            type: String
+            type: String,
         },
 
         fpCost: {
-            type: String
+            type: String,
         },
 
         requirements: {

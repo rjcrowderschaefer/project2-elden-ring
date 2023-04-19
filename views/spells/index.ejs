@@ -1,0 +1,11 @@
+<%- include('../partials/header.ejs') %>
+<h1>Spells</h1>
+
+<h2><a href="/equipment_magic/Spells/new">Add new spell</a></h2>
+
+<% for(let i = 0; i < spellsInfo.length; i++) { %>
+<img src=<%= spellsInfo[i].img %>><br>
+<a href = '/equipment_magic/Spells/<%= spellsInfo[i].name %>'><h2>Name: <%= spellsInfo[i].name %></h2></a>
+<% } %>
+
+<%- include('../partials/footer.ejs') %>
