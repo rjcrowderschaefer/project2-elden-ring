@@ -1,6 +1,8 @@
 <%- include('../partials/header.ejs') %>
 <h1>Status Effects</h1>
 
+<h2><a href="/character_information/Status_Effects/new">Add new status effect</a></h2>
+
 <% for(let i = 0; i < statusEffectsInfo.length; i++) { %>
 <img src=<%= statusEffectsInfo[i].img %>><br>
 <a href = '/character_information/Status_Effects/<%= statusEffectsInfo[i].name %>'><h2>Name: <%= statusEffectsInfo[i].name %></h2></a>

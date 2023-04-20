@@ -79,13 +79,6 @@ router.get('/Damage_Types/:name/edit', async (req, res, next) => {
 router.put('/Damage_Types/:name', async (req, res, next) => {
     try {
         const damageTypeId = await DamageTypes.findOne({name: req.params.name});
-        // let finalDamageType = {
-        //     name: req.body.name,
-        //     effectiveAgainst: req.body.effectiveAgainst,
-        //     ineffectiveAgainst: req.body.ineffectiveAgainst,
-        //     notes: req.body.notes,
-        //     img: req.body.img,
-        // }
         const updatedDamageType = await DamageTypes.findByIdAndUpdate(damageTypeId._id, req.body);
         res.redirect(`/equipment_magic/Damage_Types/${req.body.name}`);
     } catch(err) {
@@ -180,19 +173,6 @@ router.get('/Talismans/:name/edit', async (req, res, next) => {
 router.put('/Talismans/:name', async (req, res, next) => {
     try {
         const talismansId = await Talismans.findOne({name: req.params.name});
-        // let finalTalisman = {
-        //     name: req.body.name,
-        //     img: req.body.img,
-        //     weight: req.body.weight,
-        //     description: req.body.description,
-        //     effect: req.body.effect,
-        //     upgradedVersions: req.body.upgradedVersion,
-        //     whereToFind: {
-        //         regular: req.body.regular,
-        //         plusOne: req.body.plusOne,
-        //         plusTwo: req.body.plusTwo,
-        //     }
-        // };
         const updatedTalisman = await Talismans.findByIdAndUpdate(talismansId._id, req.body);
         res.redirect(`/equipment_magic/Talismans/${req.body.name}`);
     } catch(err) {
@@ -291,23 +271,6 @@ router.get('/Spells/:name/edit', async (req, res, next) => {
 router.put('/Spells/:name', async (req, res, next) => {
     try {
         const spellId = await Spells.findOne({name: req.params.name});
-        // let finalSpell = {
-        //     name: req.body.name,
-        //     img: req.body.img,
-        //     description: req.body.description,
-        //     officialKobyRating: req.body.officialKobyRating,
-        //     type: req.body.type,
-        //     class: req.body.class,
-        //     damageType: req.body.damageType,
-        //     requiredMemory: req.body.requiredMemory,
-        //     whereToFind: req.body.whereToFind,
-        //     fpCost: req.body.fpCost,
-        //     requirements: {
-        //         int: req.body.int,
-        //         fai: req.body.fai,
-        //         arc: req.body.arc,
-        //     }
-        // };
         const updatedSpell = await Spells.findByIdAndUpdate(spellId._id, req.body)
         res.redirect(`/equipment_magic/Spells/${req.body.name}`);
     } catch(err) {
