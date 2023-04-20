@@ -12,6 +12,10 @@ const damageTypesSchema = new mongoose.Schema(
             type: String,
         },
 
+        img: {
+            type: String 
+        },
+
         ineffectiveAgainst: {
             type: String
         },
