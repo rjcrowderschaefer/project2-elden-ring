@@ -316,6 +316,27 @@ router.put('/Spells/:name', async (req, res, next) => {
     }
 })
 
+router.get('/Spells/:name/delete', async (req, res, next) => {
+    try {
+        const spellToBeDeleted = await Spells.findOne({name: req.params.name});
+        res.render('spells/delete', {spellToBeDeleted});
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.delete('/Spells/:name', async (req, res, next) => {
+    try {
+        const spellId = await Spells.findOne({name: req.params.name});
+        const deletedSpell = await Spells.findByIdAndDelete(spellId._id, req.body);
+        res.redirect(`/equipment_magic/Spells`);
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
 // Weapons routes
 
 
