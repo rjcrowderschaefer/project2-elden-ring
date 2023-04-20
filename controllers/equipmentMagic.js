@@ -58,7 +58,7 @@ router.post('/Damage_Types', async (req, res, next) => {
             notes: req.body.notes,
             img: req.body.img,
         }
-        const newDamageType = await DamageTypes.create({name: req.body.name});
+        const newDamageType = await DamageTypes.create(finalDamageType);
         res.redirect('/equipment_magic/Damage_Types');
     } catch(err) {
         console.log(err);
@@ -79,6 +79,13 @@ router.get('/Damage_Types/:name/edit', async (req, res, next) => {
 router.put('/Damage_Types/:name', async (req, res, next) => {
     try {
         const damageTypeId = await DamageTypes.findOne({name: req.params.name});
+        // let finalDamageType = {
+        //     name: req.body.name,
+        //     effectiveAgainst: req.body.effectiveAgainst,
+        //     ineffectiveAgainst: req.body.ineffectiveAgainst,
+        //     notes: req.body.notes,
+        //     img: req.body.img,
+        // }
         const updatedDamageType = await DamageTypes.findByIdAndUpdate(damageTypeId._id, req.body);
         res.redirect(`/equipment_magic/Damage_Types/${req.body.name}`);
     } catch(err) {
@@ -144,14 +151,15 @@ router.post('/Talismans', async (req, res, next) => {
             weight: req.body.weight,
             description: req.body.description,
             effect: req.body.effect,
-            upgradedVersion: req.body.upgradedVersion,
+            upgradedVersions: req.body.upgradedVersion,
             whereToFind: {
                 regular: req.body.regular,
                 plusOne: req.body.plusOne,
                 plusTwo: req.body.plusTwo,
             }
         };
-        const newTalisman = await Talismans.create({name: req.body.name});
+        console.log(req.body)
+        const newTalisman = await Talismans.create(finalTalisman);
         res.redirect('/equipment_magic/Talismans');
     } catch(err) {
         console.log(err);
@@ -172,6 +180,19 @@ router.get('/Talismans/:name/edit', async (req, res, next) => {
 router.put('/Talismans/:name', async (req, res, next) => {
     try {
         const talismansId = await Talismans.findOne({name: req.params.name});
+        // let finalTalisman = {
+        //     name: req.body.name,
+        //     img: req.body.img,
+        //     weight: req.body.weight,
+        //     description: req.body.description,
+        //     effect: req.body.effect,
+        //     upgradedVersions: req.body.upgradedVersion,
+        //     whereToFind: {
+        //         regular: req.body.regular,
+        //         plusOne: req.body.plusOne,
+        //         plusTwo: req.body.plusTwo,
+        //     }
+        // };
         const updatedTalisman = await Talismans.findByIdAndUpdate(talismansId._id, req.body);
         res.redirect(`/equipment_magic/Talismans/${req.body.name}`);
     } catch(err) {
@@ -208,7 +229,8 @@ router.get('/Spells', async (req, res, next) => {
         // await Spells.deleteMany({});
         // const newSpellsInfo = await Spells.insertMany(spellsInfo);
         const spells = await Spells.find();
-        res.render(`spells/index.ejs`, {spellsInfo});
+        console.log(spellsInfo[0])
+        res.render(`spells/index.ejs`, {spellsInfo: spells});
     } catch(err) {
         console.log(err);
         next();
@@ -248,8 +270,46 @@ router.post('/Spells', async (req, res, next) => {
                 arc: req.body.arc,
             }
         };
-        const newSpell = await Spells.create({name: req.body.name});
+        const newSpell = await Spells.create(finalSpell);
         res.redirect('/equipment_magic/Spells');
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.get('/Spells/:name/edit', async (req, res, next) => {
+    try {
+        const spellToBeEdited = await Spells.findOne({name: req.params.name});
+        res.render('spells/edit', {spellToBeEdited});
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.put('/Spells/:name', async (req, res, next) => {
+    try {
+        const spellId = await Spells.findOne({name: req.params.name});
+        // let finalSpell = {
+        //     name: req.body.name,
+        //     img: req.body.img,
+        //     description: req.body.description,
+        //     officialKobyRating: req.body.officialKobyRating,
+        //     type: req.body.type,
+        //     class: req.body.class,
+        //     damageType: req.body.damageType,
+        //     requiredMemory: req.body.requiredMemory,
+        //     whereToFind: req.body.whereToFind,
+        //     fpCost: req.body.fpCost,
+        //     requirements: {
+        //         int: req.body.int,
+        //         fai: req.body.fai,
+        //         arc: req.body.arc,
+        //     }
+        // };
+        const updatedSpell = await Spells.findByIdAndUpdate(spellId._id, req.body)
+        res.redirect(`/equipment_magic/Spells/${req.body.name}`);
     } catch(err) {
         console.log(err);
         next();
