@@ -20,5 +20,4 @@ For this Wiki Page we hope bring a easy flowing experience where the user can fl
 We have CRUD (Create,Read,Update,Delete) In this wiki where you can for example create a new class, being able to read what is made, then you can update a current or old class with new information, and finally be able to delete any and all classes if you so choose. Classes was just a example used. You can do this on any and all options we have on the webpage.
 
 
-Click this link to go to our Elden Ring Wiki Page!
-                 --     --
+Click [this link](https://elden-ring.onrender.com) to go to our Elden Ring Wiki Page!
