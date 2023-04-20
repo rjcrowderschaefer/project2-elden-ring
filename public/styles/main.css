@@ -3,19 +3,15 @@
 
 
 body {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        background-image: url(https://i.redd.it/k6ef81ik42571.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-<<<<<<< HEAD
-        background-attachment: fixed;
-        
-        
-=======
-        background-attachment: fixed;   
->>>>>>> 5e9bc4f350fa6b7cc2a008018f858c80e840d59f
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(https://i.redd.it/k6ef81ik42571.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    
 }
 
     h1 {
@@ -28,10 +24,7 @@ body {
         margin-bottom: 100px;
         margin-right: 400px;
         margin-left: 400px;
-<<<<<<< HEAD
         
-=======
->>>>>>> 5e9bc4f350fa6b7cc2a008018f858c80e840d59f
     }
 
     h2 {
@@ -49,12 +42,9 @@ body {
         line-height: 1.9;
         margin: auto;
         display: block;
-<<<<<<< HEAD
        
         
         
-=======
->>>>>>> 5e9bc4f350fa6b7cc2a008018f858c80e840d59f
     }
 
    
@@ -62,44 +52,38 @@ body {
     color: rgb(223, 230, 16);
     font-size:1.75em;
     font-family: "MantiniaW00-Regular";
-    margin-left: 50px;
+    margin-left: 250px;
     background-color: rgba(0, 0, 0, 0.4);
    }
 
-<<<<<<< HEAD
+   a:visited {
+    color: rgb(245, 166, 18);
+  }
    
-   
-=======
->>>>>>> 5e9bc4f350fa6b7cc2a008018f858c80e840d59f
    a:hover {
     color: rgb(0, 255, 68);
     text-decoration: none;
   }
 
    
-<<<<<<< HEAD
    
    
    
    
    
    
-    img {
-        border-radius: 8px;
-        width: 17%;
-        
-      
-
-      }
+  img {
+    border-radius: 8px;
+    width: 17%;
+    
+  }
 
       img:hover {
         transform: scaleX(-1);
-        
-      }
-=======
 
->>>>>>> 5e9bc4f350fa6b7cc2a008018f858c80e840d59f
-     
+      }
+
+
     label {
         color: rgb(223, 230, 16);
         background-color: rgba(0, 0, 0, 0.4);
@@ -110,25 +94,7 @@ body {
         margin-top: 30px;
         margin-bottom: 30px;
         margin-right: 1000px;
-        
     }
 
-<<<<<<< HEAD
     
     
-=======
-
-
-
-    img {
-        border-radius: 8px;
-        width: 17%;
-      }
-
-      img:hover {
-        transform: scaleX(-1);
-      }
-    
-
-      
->>>>>>> 5e9bc4f350fa6b7cc2a008018f858c80e840d59f
