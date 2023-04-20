@@ -1,0 +1,22 @@
+<%- include('../partials/header.ejs') %>
+
+<h1>Edit the <%= statToBeEdited.name %> stat</h1>
+
+<form action="/character_information/Stats/<%= statToBeEdited.name %>?_method=PUT" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" value="<%= statToBeEdited.name%>">
+    <br>
+    <label for="softCap">Soft Cap:</label>
+    <input type="text" name="softCap" id="softCap" value="<%= statToBeEdited.softCap %>">
+    <br>
+    <label for="description">Description:</label>
+    <input type="text" name="description" id="description" value="<%= statToBeEdited.description %>">
+    <br>
+    <label for="img">Image URL:</label>
+    <input type="text" name="img" id="img" value="<%= statToBeEdited.img %>">
+    <br>
+    <input type="submit" value="Update <%= statToBeEdited.name%> stat">
+</form>
+
+
+<%- include('../partials/footer.ejs') %>

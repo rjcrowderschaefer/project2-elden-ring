@@ -1,0 +1,19 @@
+<%- include('../partials/header.ejs') %>
+
+<h1>Edit the <%= statusEffectToBeEdited.name %> status effect</h1>
+
+<form action="/character_information/Status_Effects/<%= statusEffectToBeEdited.name %>?_method=PUT" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" value="<%= statusEffectToBeEdited.name%>">
+    <br>
+    <label for="description">Description:</label>
+    <input type="text" name="description" id="description" value="<%= statusEffectToBeEdited.description %>">
+    <br>
+    <label for="img">Image URL:</label>
+    <input type="text" name="img" id="img" value="<%= statusEffectToBeEdited.img %>">
+    <br>
+    <input type="submit" value="Update <%= statusEffectToBeEdited.name%> stat">
+</form>
+
+
+<%- include('../partials/footer.ejs') %>

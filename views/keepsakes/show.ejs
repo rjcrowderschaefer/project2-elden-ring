@@ -1,0 +1,15 @@
+<%- include('../partials/header.ejs') %>
+
+<h1><%= myKeepsakesInfo.name %></h1>
+
+<img src= <%=myKeepsakesInfo.img %> alt="Image of <%= myKeepsakesInfo.name %>">
+
+<h2>Name: <%= myKeepsakesInfo.name %></h2>
+<h2>Type: <%= myKeepsakesInfo.type %></h2>
+<h2>Description: <%= myKeepsakesInfo.description %></h2>
+<h2>Effect: <%= myKeepsakesInfo.effect %></h2>
+
+<a href="/character_information/Keepsakes/<%= myKeepsakesInfo.name %>/edit">Edit this keepsake</a><br>
+<a href="/character_information/Keepsakes/<%= myKeepsakesInfo.name %>/delete">Delete this keepsake</a>
+
+<%- include('../partials/footer.ejs') %>

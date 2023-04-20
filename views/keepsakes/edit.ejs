@@ -1,0 +1,25 @@
+<%- include('../partials/header.ejs') %>
+
+<h1>Edit the <%= keepsakeToBeEdited.name %> keepsake</h1>
+
+<form action="/character_information/Keepsakes/<%= keepsakeToBeEdited.name %>?_method=PUT" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" value="<%= keepsakeToBeEdited.name%>">
+    <br>
+    <label for="type">Type:</label>
+    <input type="text" name="type" id="type" value="<%= keepsakeToBeEdited.type %>">
+    <br>
+    <label for="description">Description:</label>
+    <input type="text" name="description" id="description" value="<%= keepsakeToBeEdited.description %>">
+    <br>
+    <label for="effect">Effect:</label>
+    <input type="text" name="effect" id="effect" value="<%= keepsakeToBeEdited.effect %>">
+    <br>
+    <label for="img">Image URL:</label>
+    <input type="text" name="img" id="img" value="<%= keepsakeToBeEdited.img %>">
+    <br>
+    <input type="submit" value="Update <%= keepsakeToBeEdited.name%> class">
+</form>
+
+
+<%- include('../partials/footer.ejs') %>

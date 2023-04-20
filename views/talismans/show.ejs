@@ -1,0 +1,24 @@
+<%- include('../partials/header.ejs') %>
+
+<h1><%= myTalismansInfo.name %></h1>
+
+<img src= <%= myTalismansInfo.img %> alt="Image of <%= myTalismansInfo.name %>">
+
+<h2>Name: <%= myTalismansInfo.name %></h2>
+<h2>Weight: <%= myTalismansInfo.weight %></h2>
+<h2>Description: <%= myTalismansInfo.description %></h2>
+<h2>Effect: <%= myTalismansInfo.effect %></h2>
+<h2>Upgraded Versions: <%= myTalismansInfo.upgradedVersions %></h2>
+<h2><ul>
+    Where to find:
+    <li>Regular: <%= myTalismansInfo.whereToFind.regular %></li>
+    <li>Plus One: <%= myTalismansInfo.whereToFind.plusOne %></li>
+    <li>Plust Two: <%= myTalismansInfo.whereToFind.plusTwo %></li>
+</ul></h2>
+
+
+
+<a href="/equipment_magic/Talismans/<%= myTalismansInfo.name %>/edit">Edit this talisman</a><br>
+<a href="/equipment_magic/Talismans/<%= myTalismansInfo.name %>/delete">Delete this talisman</a>
+
+<%- include('../partials/footer.ejs') %>

@@ -1,19 +1,25 @@
 require('../config/connection');
 
 module.exports = {
-    Bosses: require('./world-information/Bosses'),
-    CharacterInformation: require('./CharacterInformation'),
-    Classes: require('./Classes'),
-    CreaturesEnemies: require('./CreaturesEnemies'),
-    DamageTypes: require('./DamageTypes'),
-    EquipmentMagic: require('./EquipmentMagic'),
-    Keepsakes: require('./Keepsakes'),
-    LegacyDungeons: require ('./LegacyDungeons'),
-    Npcs: require('./Npcs'),
-    Stats: require('./stats'),
-    StatusEffects: require ('./StatusEffects'),
-    Talismans: require ('./Talismans'),
-    Upgrades: require('./Upgrades'),
-    Weapons: require('./Weapons'),
-    WorldInformation: require('./worldInformation'),
+    
+    CharacterInformation: require('./character-info/CharacterInfo'),
+    // Classes: require('./character-info/classes'),
+    // Keepsakes: require('./character-info/keepsakes'),
+    // Stats: require('./character-info/Stats'),
+    // StatusEffects: require ('./character-info/StatusEffects'),
+
+    // EquipmentMagic: require('./equipment-and-magic/EquipmentAndMagic'),
+    // DamageTypes: require('./equipment-and-magin/DamageTypes'),
+    // Talismans: require ('./equipment-and-magic/Talismans'),
+    // Upgrades: require('./equipment-and-magic/Upgrades'),
+    // Weapons: require('./equipment-and-magic/Weapons'),
+
+    
+    
+    // WorldInformation: require('./world-information/WorldInformation'),
+    // Bosses: require('./world-information/Bosses'),
+    // CreaturesEnemies: require('./world-information/Enemies'),
+    // LegacyDungeons: require ('./world-information/LegacyDungeons'),
+    // Npcs: require('./world-information/Npcs'),
+
 }

@@ -1,0 +1,49 @@
+<%- include('../partials/header.ejs') %>
+
+<h1>Edit the <%= spellToBeEdited.name %> spell</h1>
+
+<form action="/equipment_magic/Spells/<%= spellToBeEdited.name %>?_method=PUT" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" value="<%= spellToBeEdited.name%>">
+    <br>
+    <label for="description">Description:</label>
+    <input type="text" name="description" id="description" value="<%= spellToBeEdited.description%>">
+    <br>
+    <label for="officialKobyRating">Official Koby Rating:</label>
+    <input type="text" name="officialKobyRating" id="officialKobyRating" value="<%= spellToBeEdited.officialKobyRating%>">
+    <br>
+    <label for="type">Type:</label>
+    <input type="text" name="type" id="type" value="<%= spellToBeEdited.type%>">
+    <br>
+    <label for="class">Class:</label>
+    <input class="text" name="class" id="class" value="<%= spellToBeEdited.class%>">
+    <br>
+    <label for="damageType">Damage Type:</label>
+    <input damageType="text" name="damageType" id="damageType" value="<%= spellToBeEdited.damageType%>">
+    <br>
+    <label for="requiredMemory">Require Memory:</label>
+    <input requiredMemory="text" name="requiredMemory" id="requiredMemory" value="<%= spellToBeEdited.requiredMemory%>">
+    <br>
+    <label for="whereToFind">Where To Find:</label>
+    <input whereToFind="text" name="whereToFind" id="whereToFind" value="<%= spellToBeEdited.whereToFind%>">
+    <br>
+    <label for="fpCost">FP Cost:</label>
+    <input fpCost="text" name="fpCost" id="fpCost" value="<%= spellToBeEdited.fpCost%>">
+    <br>
+    <label for="int">Requirements - Int:</label>
+    <input int="text" name="int" id="int" value="<%= spellToBeEdited.int%>">
+    <br>
+    <label for="fai">Requirements - Fai:</label>
+    <input fai="text" name="fai" id="fai" value="<%= spellToBeEdited.fai%>">
+    <br>
+    <label for="arc">Requirements - Arc:</label>
+    <input arc="text" name="arc" id="arc" value="<%= spellToBeEdited.arc%>">
+    <br>
+    <label for="img">Image URL:</label>
+    <input type="text" name="img" id="img" value="<%= spellToBeEdited.img%>">
+    <br>
+    <input type="submit" value="Update <%= spellToBeEdited.name%> spell">
+</form>
+
+
+<%- include('../partials/footer.ejs') %>

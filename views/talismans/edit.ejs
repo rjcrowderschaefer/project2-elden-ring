@@ -1,0 +1,37 @@
+<%- include('../partials/header.ejs') %>
+
+<h1>Edit the <%= talismanToBeEdited.name %></h1>
+
+<form action="/equipment_magic/Talismans/<%= talismanToBeEdited.name %>?_method=PUT" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" value="<%= talismanToBeEdited.name%>">
+    <br>
+    <label for="weight">Weight:</label>
+    <input type="text" name="weight" id="weight" value="<%= talismanToBeEdited.weight%>">
+    <br>
+    <label for="description">Description:</label>
+    <input type="text" name="description" id="description" value="<%= talismanToBeEdited.description%>">
+    <br>
+    <label for="effect">Effect:</label>
+    <input type="text" name="effect" id="effect" value="<%= talismanToBeEdited.effect%>">
+    <br>
+    <label for="upgradedVersion">Upgraded Version:</label>
+    <input type="text" name="upgradedVersion" id="upgradedVersion" value="<%= talismanToBeEdited.upgradedVersion%>">
+    <br>
+    <label for="regular">Where to find - Regular:</label>
+    <input type="text" name="regular" id="regular" value="<%= talismanToBeEdited.whereToFind.regular%>">
+    <br>
+    <label for="plusOne">Where to find - Plus One:</label>
+    <input type="text" name="plusOne" id="plusOne" value="<%= talismanToBeEdited.whereToFind.plusOne%>">
+    <br>
+    <label for="plusTwo">Where to find - Plus Two:</label>
+    <input type="text" name="plusTwo" id="plusTwo" value="<%= talismanToBeEdited.whereToFind.plusTwo%>">
+    <br>
+    <label for="img">Image URL:</label>
+    <input type="text" name="img" id="img" value="<%= talismanToBeEdited.img%>">
+    <br>
+    <input type="submit" value="Update <%= talismanToBeEdited.name%> talisman">
+</form>
+
+
+<%- include('../partials/footer.ejs') %>

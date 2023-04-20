@@ -1,0 +1,26 @@
+<%- include('../partials/header.ejs') %>
+
+<h1><%= mySpellsInfo.name %></h1>
+
+<img src= <%= mySpellsInfo.img %> alt="Image of <%= mySpellsInfo.name %>">
+
+<h2>Name: <%= mySpellsInfo.name %></h2>
+<h2>Description: <%= mySpellsInfo.description %></h2>
+<h2>Official Koby Rating: <%= mySpellsInfo.officialKobyRating %></h2>
+<h2>Type: <%= mySpellsInfo.type %></h2>
+<h2>Class: <%= mySpellsInfo.class %></h2>
+<h2>Damage Type: <%= mySpellsInfo.damageType %></h2>
+<h2>Required Memory: <%= mySpellsInfo.requiredMemory %></h2>
+<h2>Where To Find: <%= mySpellsInfo.whereToFind %></h2>
+<h2>FP Cost: <%= mySpellsInfo.fpCost %></h2>
+<h2><ul>
+    Requirements:
+    <li>Int: <%= mySpellsInfo.requirements.int %></li>
+    <li>Fai: <%= mySpellsInfo.requirements.fai %></li>
+    <li>Arc: <%= mySpellsInfo.requirements.arc %></li>
+</ul></h2>
+
+<a href="/equipment_magic/Spells/<%= mySpellsInfo.name %>/edit">Edit this spell</a><br>
+<a href="/equipment_magic/Spells/<%= mySpellsInfo.name %>/delete">Delete this spell</a>
+
+<%- include('../partials/footer.ejs') %>
