@@ -85,7 +85,7 @@ router.post('/Classes', async (req, res, next) => {
                 legs: req.body.legs,
             }
         };
-        const newClass = await Classes.create({name: req.body.name});
+        const newClass = await Classes.create(finalClass);
         // console.log(req.body);
         // console.log(newClass);
         res.redirect('/character_information/Classes');
@@ -179,7 +179,7 @@ router.post('/Keepsakes', async (req, res, next) => {
         effect: req.body.effect,
         img: req.body.img,
        };
-        const newKeepsake = await Keepsakes.create({name: req.body.name});
+        const newKeepsake = await Keepsakes.create(finalKeepsakes);
         res.redirect('/character_information/Keepsakes');
     } catch(err) {
         console.log(err);
@@ -267,7 +267,7 @@ router.post('/Stats', async (req, res, next) => {
             img: req.body.img,
             description: req.body.description,
         };
-        const newStat = await Stats.create({name: req.body.name});
+        const newStat = await Stats.create(finalStats);
         res.redirect('/character_information/Stats');
     } catch(err) {
         console.log(err);
@@ -353,7 +353,7 @@ router.post('/Status_Effects', async (req, res, next) => {
             img: req.body.img,
             description: req.body.description,
         };
-        const newStatusEffect = await StatusEffects.create ({name: req.body.name});
+        const newStatusEffect = await StatusEffects.create (finalStatusEffects);
         res.redirect('/character_information/Status_Effects');
     } catch(err) {
         console.log(err);
