@@ -1,6 +1,9 @@
 @import url(//db.onlinewebfonts.com/c/9e991273bb4997c0b4be46bce5427daf?family=MantiniaW00-Regular);
 
-
+*{
+  margin: 0;
+  padding: 0;
+}
 
 body {
     margin: 0;
@@ -12,9 +15,18 @@ body {
     background-attachment: fixed;
 }
 
-nav {
-  padding-top: 20px;
-} 
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
     
 
 
@@ -47,6 +59,18 @@ h2 {
     display: block;  
 }
 
+.sub-header {
+  font-family: "MantiniaW00-Regular";
+  background-color: rgba(87, 86, 86, 0.911);
+  font-size: 2em;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 790px;
+  margin-left: 400px;
+  text-align: left;
+}
 
 a:link {
   color: rgb(223, 230, 16);
