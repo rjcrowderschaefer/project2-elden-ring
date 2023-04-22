@@ -1,11 +1,14 @@
 <%- include('../partials/header.ejs') %>
 
 <div class='sub-header'><h2>Character Information</h2></div>
-<% for(let i = 0; i < characterInfo.length; i++) { %>
 
-<img src=<%= characterInfo[i].img %>><br>
-<h2>Name: <a href = 'character_information/<%= characterInfo[i].urlName %>'>
-    <%= characterInfo[i].name %></a></h2>
+<div class ='list'>
+    <% for(let i = 0; i < characterInfo.length; i++) { %>
 
-<% } %>
+    <img src=<%= characterInfo[i].img %>><br>
+    <h2>Name: <a href = 'character_information/<%= characterInfo[i].urlName %>'>
+        <%= characterInfo[i].name %></a></h2>
+
+    <% } %>
+</div>
 <%- include('../partials/footer.ejs') %>

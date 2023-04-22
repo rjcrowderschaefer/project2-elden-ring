@@ -13,16 +13,10 @@ const equipmentMagicController = require('./controllers/equipmentMagic');
 // const weaponsController = require('./controllers/weapons');
 // const worldInformationController = require('./controllers/worldInformation');
 
-
-
 require('dotenv').config();
 const connectionString = process.env.MONGO_DB_URI;
 
 console.log(connectionString);
-
-
-
-
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
@@ -37,7 +31,6 @@ app.use('/character_information', characterInformationController);
 
 app.use('/equipment_magic', equipmentMagicController);
 // app.use('/equipment_magic/weapons', weaponsController);
-// app.use('/equipment_magic/spells', spellsController)
 
 // app.use('/world_information', worldInformationController);
 // app.use('/world_information/bosses', bossesController);
